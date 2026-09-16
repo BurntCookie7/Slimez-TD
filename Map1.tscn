@@ -33,3 +33,4 @@ curve = ExtResource("4_j556s")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=487808488]
 position = Vector2(1, 86)
+rotates = false

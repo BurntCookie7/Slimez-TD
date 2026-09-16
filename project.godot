@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Slimez TD"
-run/main_scene="uid://t2ts842jwess"
+run/main_scene="uid://citldfkeokolc"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
