@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bljawtbqyh825"]
+
+[ext_resource type="Texture2D" uid="uid://c4ylkx3ixqxyr" path="res://basicslime.png" id="1_cupsx"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=281296448]
+motion_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1983480069]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_cupsx")
