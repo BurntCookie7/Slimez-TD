@@ -2,6 +2,7 @@ extends Node2D
 @onready var path: PathFollow2D = $Path2D/PathFollow2D
 
 @export var enemies: Array[PackedScene]
+@export var number_of_enemies: int
 @onready var path_node = find_child("Path2D", true, false)
 @onready var tilemap = find_child("TileMapLayer")
 @onready var active_followers: Array[PathFollow2D] = []
@@ -16,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	manage_enemies()
 	
 func spawn_enemy(enemy_choice: PackedScene):
-	if enemies_spawned >= get_meta("NumerOfEnemies"):
+	if enemies_spawned >= number_of_enemies:
 		pass
 	else:
 		var follower := PathFollow2D.new()

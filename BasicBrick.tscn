@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bljawtbqyh825"]
+
+[sub_resource type="Gradient" id="Gradient_7rg7y"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vn12v"]
+gradient = SubResource("Gradient_7rg7y")
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=281296448]
+motion_mode = 1
+metadata/Speed = 0.5
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1983480069]
+scale = Vector2(0.3, 0.3)
+texture = SubResource("GradientTexture2D_vn12v")

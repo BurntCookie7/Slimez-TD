@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h0kx2bras10g"
-path="res://.godot/imported/slimeball-projectile1.png-5e381495440ea7f22af5a485d8238b8f.ctex"
+uid="uid://dg1nu27wroo38"
+path="res://.godot/imported/slimeztdlogo.png-505a2c12b5c75935a55fbb74e8bd5a88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://slimeball-projectile1.png"
-dest_files=["res://.godot/imported/slimeball-projectile1.png-5e381495440ea7f22af5a485d8238b8f.ctex"]
+source_file="res://Images/slimeztdlogo.png"
+dest_files=["res://.godot/imported/slimeztdlogo.png-505a2c12b5c75935a55fbb74e8bd5a88.ctex"]
 
 [params]
 

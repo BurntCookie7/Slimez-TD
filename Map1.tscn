@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://cwpdkben1kevt"]
 
 [ext_resource type="Script" uid="uid://c6qj0en5ovpbd" path="res://DefaultMap.gd" id="1_3wee7"]
-[ext_resource type="Texture2D" uid="uid://clnjygjovxndh" path="res://TileMap.png" id="1_rad52"]
-[ext_resource type="PackedScene" uid="uid://bljawtbqyh825" path="res://BasicSlime.tscn" id="2_s0gvh"]
-[ext_resource type="PackedScene" uid="uid://cjf7j51jj5ep4" path="res://FastSlime.tscn" id="3_6p4ww"]
+[ext_resource type="Texture2D" uid="uid://clnjygjovxndh" path="res://Images/TileMap.png" id="1_rad52"]
+[ext_resource type="PackedScene" uid="uid://bljawtbqyh825" path="res://BasicBrick.tscn" id="2_s0gvh"]
+[ext_resource type="PackedScene" uid="uid://cr0am0oj8cqf7" path="res://FastBrick.tscn" id="3_6p4ww"]
 [ext_resource type="Curve2D" uid="uid://dtjaatxur5x1e" path="res://Map1Path.tres" id="4_j556s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3wee7"]
@@ -26,7 +26,7 @@ sources/1 = SubResource("TileSetAtlasSource_3wee7")
 [node name="Root" type="Node2D" unique_id=1557150537]
 script = ExtResource("1_3wee7")
 enemies = Array[PackedScene]([ExtResource("2_s0gvh"), ExtResource("3_6p4ww")])
-metadata/NumerOfEnemies = 5
+number_of_enemies = 5
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=195936465]
 position = Vector2(0, 12)

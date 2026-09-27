@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cr0am0oj8cqf7"]
+
+[sub_resource type="Gradient" id="Gradient_nmugw"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0.31764707, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0nt7i"]
+gradient = SubResource("Gradient_nmugw")
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=281296448]
+modulate = Color(1.685791, 1.685791, 1.685791, 1)
+motion_mode = 1
+metadata/Speed = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1983480069]
+scale = Vector2(0.3, 0.3)
+texture = SubResource("GradientTexture2D_0nt7i")

@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="Slimez TD"
-run/main_scene="uid://citldfkeokolc"
+run/main_scene="uid://cqmy651kb0wu7"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Images/icon.svg"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [editor_plugins]
