@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://00l3ftkvq8ms"]
+
+[ext_resource type="Script" uid="uid://b0p3k4jhqcq2y" path="res://DefaultTower.gd" id="1_yf1uy"]
+[ext_resource type="Texture2D" uid="uid://cneudrp3ox3rh" path="res://Images/basicslime.png" id="2_fm2wc"]
+
+[sub_resource type="Gradient" id="Gradient_yf1uy"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.648, 0.68)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qkyit"]
+gradient = SubResource("Gradient_yf1uy")
+width = 100
+height = 100
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qkyit"]
+radius = 48.010414
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkyit"]
+size = Vector2(32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1398299392]
+z_index = 2
+script = ExtResource("1_yf1uy")
+attack_range = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=355360105]
+visibility_layer = 2
+position = Vector2(-0.99999994, -11.999999)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_fm2wc")
+
+[node name="RadiusDisplay" type="Sprite2D" parent="." unique_id=463146462]
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_qkyit")
+
+[node name="Radius" type="Area2D" parent="." unique_id=1961040088]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radius" unique_id=239000383]
+shape = SubResource("CircleShape2D_qkyit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1716567113]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_qkyit")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1414247941]
+scale = Vector2(1.8, 1.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=897026737]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_qkyit")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
