@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://00l3ftkvq8ms"]
+
+[ext_resource type="Script" uid="uid://b0p3k4jhqcq2y" path="res://DefaultTower.gd" id="1_yf1uy"]
+
+[sub_resource type="Gradient" id="Gradient_rtyqk"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_geqgc"]
+gradient = SubResource("Gradient_rtyqk")
+
+[sub_resource type="Gradient" id="Gradient_yf1uy"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.648, 0.68)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qkyit"]
+gradient = SubResource("Gradient_yf1uy")
+width = 100
+height = 100
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qkyit"]
+radius = 48.010414
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1398299392]
+z_index = 2
+script = ExtResource("1_yf1uy")
+attack_range = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=355360105]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("GradientTexture2D_geqgc")
+
+[node name="RadiusDisplay" type="Sprite2D" parent="." unique_id=463146462]
+visible = false
+texture = SubResource("GradientTexture2D_qkyit")
+
+[node name="Radius" type="Area2D" parent="." unique_id=1961040088]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Radius" unique_id=239000383]
+shape = SubResource("CircleShape2D_qkyit")

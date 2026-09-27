@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cjf7j51jj5ep4"]
+
+[ext_resource type="Texture2D" uid="uid://cneudrp3ox3rh" path="res://basicslime.png" id="1_ibotw"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=281296448]
+modulate = Color(1.9239607, 1.9239607, 1.9239607, 1)
+motion_mode = 1
+metadata/Speed = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1983480069]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_ibotw")
