@@ -24,6 +24,9 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_qkyit"]
 radius = 48.010414
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkyit"]
+size = Vector2(32, 32)
+
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1398299392]
 z_index = 2
 script = ExtResource("1_yf1uy")
@@ -34,10 +37,22 @@ scale = Vector2(0.5, 0.5)
 texture = SubResource("GradientTexture2D_geqgc")
 
 [node name="RadiusDisplay" type="Sprite2D" parent="." unique_id=463146462]
-visible = false
 texture = SubResource("GradientTexture2D_qkyit")
 
 [node name="Radius" type="Area2D" parent="." unique_id=1961040088]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Radius" unique_id=239000383]
 shape = SubResource("CircleShape2D_qkyit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1716567113]
+shape = SubResource("RectangleShape2D_qkyit")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1414247941]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=897026737]
+visible = false
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_qkyit")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
