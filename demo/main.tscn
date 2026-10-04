@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ck8uynbak3erk"]
+
+[ext_resource type="Script" uid="uid://uvsww2qy48ra" path="res://demo/main.gd" id="1_2hjjp"]
+[ext_resource type="PackedScene" uid="uid://bhaqsaspblylm" path="res://demo/button_3.tscn" id="2_ru5rj"]
+
+[node name="Main" type="CanvasLayer" unique_id=458722568 node_paths=PackedStringArray("button1", "button2")]
+script = ExtResource("1_2hjjp")
+button1 = NodePath("CenterContainer/VBoxContainer/Button1")
+button2 = NodePath("CenterContainer/VBoxContainer/Button2")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2011296922]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=435322234]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1496794607]
+layout_mode = 2
+text = "Click me to print to console"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1198245024]
+layout_mode = 2
+text = "Click me, too!"
+
+[node name="Button3" parent="CenterContainer/VBoxContainer" unique_id=743605062 instance=ExtResource("2_ru5rj")]
+layout_mode = 2

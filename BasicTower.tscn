@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://00l3ftkvq8ms"]
 
-[ext_resource type="Script" uid="uid://b0p3k4jhqcq2y" path="res://DefaultTower.gd" id="1_yf1uy"]
+[ext_resource type="Script" uid="uid://b0p3k4jhqcq2y" path="res://Scripts/DefaultTower.gd" id="1_yf1uy"]
 [ext_resource type="Texture2D" uid="uid://cneudrp3ox3rh" path="res://Images/basicslime.png" id="2_fm2wc"]
+[ext_resource type="PackedScene" uid="uid://6k2mb6bhmfwx" path="res://BasicProjectile.tscn" id="2_vxmqi"]
 
 [sub_resource type="Gradient" id="Gradient_yf1uy"]
 interpolation_mode = 1
@@ -24,7 +25,9 @@ size = Vector2(32, 32)
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1398299392]
 z_index = 2
 script = ExtResource("1_yf1uy")
-attack_range = 2.0
+attack_range = 3.0
+projectile = ExtResource("2_vxmqi")
+projectile_speed = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=355360105]
 visibility_layer = 2
@@ -36,22 +39,25 @@ texture = ExtResource("2_fm2wc")
 scale = Vector2(2, 2)
 texture = SubResource("GradientTexture2D_qkyit")
 
-[node name="Radius" type="Area2D" parent="." unique_id=1961040088]
+[node name="AttackBounds" type="Area2D" parent="." unique_id=1961040088]
 scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Radius" unique_id=239000383]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBounds" unique_id=239000383]
 shape = SubResource("CircleShape2D_qkyit")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1716567113]
-scale = Vector2(1.5, 1.5)
+[node name="Placebounds2" type="CollisionShape2D" parent="." unique_id=1716567113]
+scale = Vector2(2.7, 2.7)
 shape = SubResource("RectangleShape2D_qkyit")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1414247941]
+[node name="PlaceBounds" type="Area2D" parent="." unique_id=1414247941]
 scale = Vector2(1.8, 1.8)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=897026737]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlaceBounds" unique_id=897026737]
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_qkyit")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="AttackBounds" to="." method="_on_attack_bounds_body_entered"]
+[connection signal="body_entered" from="PlaceBounds" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="PlaceBounds" to="." method="_on_area_2d_body_exited"]

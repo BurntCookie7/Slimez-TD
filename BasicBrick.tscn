@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bljawtbqyh825"]
 
+[ext_resource type="Script" uid="uid://bchltysemkxj8" path="res://Custom Nodes/Health_System.gd" id="1_0nt7i"]
+[ext_resource type="Script" uid="uid://dufk3272dmd0t" path="res://basic_brick.gd" id="1_wlg6t"]
+
 [sub_resource type="Gradient" id="Gradient_7rg7y"]
 offsets = PackedFloat32Array(1)
 colors = PackedColorArray(1, 0, 0, 1)
@@ -7,10 +10,33 @@ colors = PackedColorArray(1, 0, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vn12v"]
 gradient = SubResource("Gradient_7rg7y")
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=281296448]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkyit"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_geqgc"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=281296448 groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 4
 motion_mode = 1
+script = ExtResource("1_wlg6t")
 metadata/Speed = 0.5
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1983480069]
 scale = Vector2(0.3, 0.3)
 texture = SubResource("GradientTexture2D_vn12v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1107220184]
+shape = SubResource("RectangleShape2D_qkyit")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2015808164]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=25920430]
+shape = SubResource("RectangleShape2D_geqgc")
+
+[node name="HealthSystem" type="Node" parent="." unique_id=434480328]
+script = ExtResource("1_0nt7i")
+metadata/_custom_type_script = "uid://bchltysemkxj8"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
