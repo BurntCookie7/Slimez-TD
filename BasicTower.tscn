@@ -59,5 +59,6 @@ scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_qkyit")
 
 [connection signal="body_entered" from="AttackBounds" to="." method="_on_attack_bounds_body_entered"]
+[connection signal="body_exited" from="AttackBounds" to="." method="_on_attack_bounds_body_exited"]
 [connection signal="body_entered" from="PlaceBounds" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="PlaceBounds" to="." method="_on_area_2d_body_exited"]

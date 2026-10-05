@@ -17,8 +17,8 @@ func _on_pressed() -> void:
 
 
 func _on_mouse_entered() -> void:
-	scale.x = scale.x+0.01
-	scale.y = scale.x+0.01
+	scale.x = scale.x+0.03
+	scale.y = scale.x+0.03
 
 
 func _on_mouse_exited() -> void:

@@ -7,12 +7,12 @@
 [ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="4_e2xy7"]
 [ext_resource type="Script" uid="uid://dhwawolmiugfr" path="res://settings.gd" id="6_7r1g0"]
 
-[sub_resource type="Gradient" id="Gradient_7r1g0"]
+[sub_resource type="Gradient" id="Gradient_loy4s"]
 offsets = PackedFloat32Array(0, 0.41566265, 1)
 colors = PackedColorArray(0.003814362, 0.17793652, 0.77516866, 1, 0, 0.47058824, 1, 1, 0, 0.47058824, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
-gradient = SubResource("Gradient_7r1g0")
+gradient = SubResource("Gradient_loy4s")
 
 [node name="Node2D" type="Node2D" unique_id=1860486964]
 z_index = 1
@@ -76,4 +76,3 @@ text = "v0.1.0 [ALPHA TESTING]"
 [connection signal="pressed" from="QUIT" to="QUIT" method="_on_pressed"]
 [connection signal="mouse_entered" from="Settings" to="Settings" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Settings" to="Settings" method="_on_mouse_exited"]
-[connection signal="pressed" from="Settings" to="Settings" method="_on_pressed"]

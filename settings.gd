@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Settings.tscn")
 
 func _on_mouse_entered() -> void:
 	scale.x = scale.x+0.03
