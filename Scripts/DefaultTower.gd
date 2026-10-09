@@ -31,25 +31,45 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _on_attack_bounds_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemy") and is_in_group("Placed"):
 		target_enemy = body
-		shoot()
 
 func _on_attack_bounds_body_exited(body: Node2D) -> void:
-	if body.is_in_group("Enemy"):
+	if body == target_enemy:
 		target_enemy = null
 
 
-func shoot():
-	if projectile_instance == null and is_instance_valid(target_enemy):
-		projectile_instance = projectile.instantiate()
-		add_child(projectile_instance)
-		projectile_speed = projectile_instance.speed
-		projectile_instance.active = true
+func shoot() -> void:
+	if is_instance_valid(projectile_instance) or not is_instance_valid(target_enemy):
+		return
+	projectile_instance = projectile.instantiate()
+	add_child(projectile_instance)
+	projectile_speed = projectile_instance.speed
+	projectile_instance.active = true
+		
 	
-func manage_projectile():
-	if projectile_instance != null:
-		if projectile_instance.active == true:
-			projectile_instance.global_position.x = move_toward(projectile_instance.global_position.x, target_enemy.global_position.x, projectile_speed)
-			projectile_instance.global_position.y = move_toward(projectile_instance.global_position.y, target_enemy.global_position.y, projectile_speed)
-	else:
+func manage_projectile() -> void:
+	# Projectile was freed (hit something): clear it and fire again if we can
+	if not is_instance_valid(projectile_instance):
 		projectile_instance = null
+		if not is_instance_valid(target_enemy):
+			target_enemy = _find_new_target()
 		shoot()
+		return
+
+	# Target died or left while the projectile was mid-flight
+	if not is_instance_valid(target_enemy):
+		projectile_instance.queue_free()
+		projectile_instance = null
+		target_enemy = _find_new_target()
+		return
+
+	if projectile_instance.active:
+		projectile_instance.global_position = projectile_instance.global_position.move_toward(
+			target_enemy.global_position, projectile_speed)
+		
+func _find_new_target() -> Node2D:
+	if not is_in_group("Placed"):
+		return null
+	for body in radius.get_overlapping_bodies():
+		if is_instance_valid(body) and body.is_in_group("Enemy"):
+			return body
+	return null

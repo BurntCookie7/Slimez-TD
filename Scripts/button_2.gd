@@ -1,7 +1,5 @@
-extends StaticBody2D
-@export var damage: float = 100.0
-@export var speed: float = 1.0
-var active = false
+extends Button
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

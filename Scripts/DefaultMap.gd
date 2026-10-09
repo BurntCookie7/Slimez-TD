@@ -1,8 +1,10 @@
 extends Node2D
 @onready var path: PathFollow2D = $Path2D/PathFollow2D
 
+
 @export var enemies: Array[PackedScene]
 @export var number_of_enemies: int
+@export var enemy_spawn_rate: float
 @onready var path_node = find_child("Path2D", true, false)
 @onready var tilemap = find_child("TileMapLayer")
 @onready var active_followers: Array[PathFollow2D] = []
@@ -13,7 +15,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	for follower in active_followers:
-		follower.progress += follower.get_meta("Speed")
+		follower.progress += follower.get_meta("Speed") * 2
 	manage_enemies()
 	
 func spawn_enemy(enemy_choice: PackedScene):

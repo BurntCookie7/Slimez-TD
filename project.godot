@@ -18,16 +18,18 @@ config/icon="res://Images/icon.svg"
 [autoload]
 
 Console="*uid://ouiu5xh1cs8n"
+Globals="*uid://ctx34nt2pallx"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Quick-Add-Menu/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/console/plugin.cfg", "res://addons/kritaImports/plugin.cfg")
+enabled=PackedStringArray("res://addons/Quick-Add-Menu/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/console/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg", "res://addons/kritaImports/plugin.cfg")
 
 [global_group]
 
@@ -48,4 +50,5 @@ MouseLeft={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://6k2mb6bhmfwx"]
+[gd_scene format=3 uid="uid://k0ur4o5b5sd4"]
 
-[ext_resource type="Script" uid="uid://lvshikbwha5v" path="res://Scripts/basic_projectile.gd" id="1_15r8e"]
-[ext_resource type="Texture2D" uid="uid://h0kx2bras10g" path="res://Images/slimeball-projectile1.png" id="1_w2mue"]
+[ext_resource type="Script" uid="uid://lvshikbwha5v" path="res://Scripts/basic_projectile.gd" id="1_ew3ic"]
+[ext_resource type="Texture2D" uid="uid://kcyuemodsf8q" path="res://Images/slimeball-upgraded.png" id="2_ew3ic"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_geqgc"]
 radius = 25.317978
@@ -9,15 +9,15 @@ radius = 25.317978
 [node name="Node2D" type="StaticBody2D" unique_id=2023324828 groups=["Projectile"]]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("1_15r8e")
-damage = 50.0
+script = ExtResource("1_ew3ic")
 speed = 5.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=578036953]
-texture_filter = 1
+modulate = Color(1.0868737, 1.0868737, 1.0868737, 1)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_w2mue")
+texture = ExtResource("2_ew3ic")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=283458327]
+visible = false
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_geqgc")

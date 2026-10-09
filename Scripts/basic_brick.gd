@@ -11,5 +11,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		
 func _physics_process(delta: float) -> void:
 	if health_system.health <= 0:
-		health_system.die()
+		health_system.die(true)
 		

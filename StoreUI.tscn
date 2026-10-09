@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dmc7wpey14pmu"]
+
+[ext_resource type="Texture2D" uid="uid://cneudrp3ox3rh" path="res://Images/basicslime.png" id="1_5ar8n"]
+[ext_resource type="Script" uid="uid://nnggvcp3t4v1" path="res://Scripts/store_ui.gd" id="1_iy5eu"]
+[ext_resource type="Texture2D" uid="uid://cuj5kuc7bygpa" path="res://Images/upgradedslime.png" id="2_k77rx"]
+[ext_resource type="Script" uid="uid://do4tgrdwtpmjk" path="res://Scripts/StoreButton.gd" id="3_8yel7"]
+[ext_resource type="PackedScene" uid="uid://rjyep2h6eaul" path="res://UpgradedTower.tscn" id="4_k77rx"]
+[ext_resource type="PackedScene" uid="uid://00l3ftkvq8ms" path="res://BasicTower.tscn" id="5_26ee0"]
+
+[node name="Control" type="Control" unique_id=851024030]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iy5eu")
+
+[node name="Panel" type="Panel" parent="." unique_id=313898926]
+layout_mode = 0
+offset_left = 1367.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel" unique_id=717600032]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 549.0
+offset_bottom = 1075.0
+theme_override_constants/separation = -787
+
+[node name="UpgradedTower" type="Button" parent="Panel/VBoxContainer2" unique_id=597033639]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 47
+text = "Upgraded Slime 
+20G"
+icon = ExtResource("2_k77rx")
+expand_icon = true
+script = ExtResource("3_8yel7")
+Tower = ExtResource("4_k77rx")
+
+[node name="BasicTower" type="Button" parent="Panel/VBoxContainer2" unique_id=1714520439]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 47
+text = "Basic Slime 
+10G"
+icon = ExtResource("1_5ar8n")
+expand_icon = true
+script = ExtResource("3_8yel7")
+Tower = ExtResource("5_26ee0")
+price = 10
+
+[node name="Label" type="Label" parent="." unique_id=202573754]
+layout_mode = 0
+offset_left = 1368.0
+offset_top = 1019.0
+offset_right = 1488.0
+offset_bottom = 1076.0
+theme_override_font_sizes/font_size = 41
+text = "Coins: 0"
+
+[connection signal="pressed" from="Panel/VBoxContainer2/UpgradedTower" to="." method="_on_upgraded_tower_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer2/BasicTower" to="." method="_on_basic_tower_pressed"]

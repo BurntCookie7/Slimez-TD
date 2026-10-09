@@ -1,30 +1,27 @@
 extends Node2D
 
-@export var Towers: Array[PackedScene]
-var placing: bool
+@export var Tower: PackedScene
 var current_tower = null
 var tower_instance = null
-@onready var towers: Node = $"../Towers"
-@onready var map: Node = $"../Map"
-#var tilemap = map.
+@export var towers: Node
+@export var map: Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_tower(Towers[0])
-	placing = true
+	set_tower(Tower)
+	Globals.placing = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept") and not placing:
-		set_tower(Towers[0])
-		placing = true
+	#if Input.is_action_just_pressed("ui_accept") and not placing:
+		#placing = true
 	manage_placing()
 
 func manage_placing():
-	if placing:
+	if Globals.placing:
 		var overlapped = tower_instance.overlap
 		if overlapped:
 			tower_instance.modulate = Color(1.0, 1.0, 1.0, 0.5)
@@ -41,7 +38,7 @@ func manage_placing():
 			tower_instance.radius_display.hide()
 			tower_instance.remove_from_group("Placing")
 			tower_instance.add_to_group("Placed")
-			placing = false
+			Globals.placing = false
 	else:
 		tower_instance.radius_display.hide()
 		

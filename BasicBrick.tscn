@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bljawtbqyh825"]
 
 [ext_resource type="Script" uid="uid://bchltysemkxj8" path="res://Custom Nodes/Health_System.gd" id="1_0nt7i"]
-[ext_resource type="Script" uid="uid://dufk3272dmd0t" path="res://basic_brick.gd" id="1_wlg6t"]
+[ext_resource type="Script" uid="uid://dufk3272dmd0t" path="res://Scripts/basic_brick.gd" id="1_wlg6t"]
 
 [sub_resource type="Gradient" id="Gradient_7rg7y"]
 offsets = PackedFloat32Array(1)
