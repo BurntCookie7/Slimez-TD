@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cr0am0oj8cqf7" path="res://FastBrick.tscn" id="3_6p4ww"]
 [ext_resource type="PackedScene" uid="uid://dacbtcon7ucth" path="res://path.tscn" id="4_1f4ql"]
 [ext_resource type="Curve2D" uid="uid://dtjaatxur5x1e" path="res://Map1Path.tres" id="4_j556s"]
-[ext_resource type="PackedScene" uid="uid://dmc7wpey14pmu" path="res://StoreUI.tscn" id="7_hv236"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hv236"]
 scenes/1/scene = ExtResource("4_1f4ql")
@@ -51,5 +50,3 @@ position = Vector2(-99.015335, 86.40602)
 rotates = false
 loop = false
 metadata/Speed = 0.0
-
-[node name="Control" parent="." unique_id=851024030 instance=ExtResource("7_hv236")]

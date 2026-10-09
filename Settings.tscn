@@ -73,7 +73,6 @@ expand_icon = true
 script = ExtResource("2_mx4kw")
 
 [node name="Resolution" type="Control" parent="NinePatchRect" unique_id=304379360]
-visible = false
 anchors_preset = 0
 offset_left = -164.0
 offset_top = -120.0
@@ -87,7 +86,6 @@ offset_top = 258.0
 offset_right = 545.0
 offset_bottom = 289.0
 scale = Vector2(1.2, 1.2)
-disabled = true
 selected = 2
 item_count = 4
 popup/item_0/text = "854x480"

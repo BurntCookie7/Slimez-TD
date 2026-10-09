@@ -22,9 +22,9 @@ func _on_option_button_item_selected(index: int) -> void:
 	get_window().content_scale_size = size
 	get_window().content_scale_factor = float(size.x) / BASE_SIZE.x
 	#get_window().move_to_center()
-	var cam := get_viewport().get_camera_2d()
-	if cam:
-		cam.zoom = Vector2(size) / Vector2(BASE_SIZE)
+	#var cam := get_viewport().get_camera_2d()
+	#if cam:
+		#cam.zoom = Vector2(size) / Vector2(BASE_SIZE)
 
 
 func _on_h_slider_value_changed(value: float) -> void:
