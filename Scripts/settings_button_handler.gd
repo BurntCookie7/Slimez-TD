@@ -3,6 +3,7 @@ extends Node
 @onready var selected_resolution = resolution.get_item_text(resolution.selected)
 @onready var volume_number: Label = $"../NinePatchRect/Volume/Number"
 @onready var volume_slider: HSlider = $"../NinePatchRect/Volume/HSlider"
+@onready var difficulty: OptionButton = $"../NinePatchRect/Difficulty/DifficultyChoice"
 
 const BASE_SIZE := Vector2i(1920, 1080)
 
@@ -29,3 +30,7 @@ func _on_option_button_item_selected(index: int) -> void:
 
 func _on_h_slider_value_changed(value: float) -> void:
 	volume_number.text = str(int(volume_slider.value))
+
+
+func _on_difficulty_choice_item_selected(index: int) -> void:
+	Globals.difficulty = difficulty.get_selected_id()

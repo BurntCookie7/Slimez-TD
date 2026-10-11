@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://blnqarv337owm"]
+
+[ext_resource type="Texture2D" uid="uid://cigotmmhrk8x2" path="res://Images/NoteContainerSimple.png" id="1_sscg6"]
+
+[resource]
+texture = ExtResource("1_sscg6")
+modulate_color = Color(0.883378, 0.88337797, 0.88337797, 1)

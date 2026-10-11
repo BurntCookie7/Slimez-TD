@@ -11,7 +11,8 @@ extends Node2D
 var enemies_spawned: int = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	number_of_enemies *= Globals.difficulty
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	for follower in active_followers:

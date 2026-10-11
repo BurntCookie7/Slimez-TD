@@ -1,8 +1,9 @@
 extends Control
 @export var Placer: Node2D = null
-@onready var upgraded_tower: Button = $Panel/VBoxContainer2/UpgradedTower
-@onready var basic_tower: Button = $Panel/VBoxContainer2/BasicTower
-@onready var gold_label: Label = $Label
+@onready var upgraded_tower: Button = $VBoxContainer2/Control/UpgradedTower
+@onready var basic_tower: Button = $VBoxContainer2/Control2/BasicTower
+@onready var gold_label: Label = $NinePatchRect/GoldLabel
+
 
 
 # Called when the node enters the scene tree for the first time.

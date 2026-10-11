@@ -22,13 +22,13 @@ func _physics_process(delta: float) -> void:
 
 func manage_placing():
 	if Globals.placing:
-		var overlapped = tower_instance.overlap
+		var overlapped = tower_instance.is_overlapping()
 		if overlapped:
 			tower_instance.modulate = Color(1.0, 1.0, 1.0, 0.5)
 		else:
 			tower_instance.modulate = Color(1.0, 1.0, 1.0, 1.0)
 		tower_instance.global_position = get_global_mouse_position()
-		tower_instance.add_to_group("Placing")
+		#tower_instance.add_to_group("Placing")
 		tower_instance.radius_display.show()
 		if Input.is_action_just_pressed("MouseLeft") and not overlapped:
 			tower_instance.radius_display.hide()
@@ -45,5 +45,6 @@ func manage_placing():
 func set_tower(tower):
 	current_tower = tower
 	tower_instance = current_tower.instantiate()
+	tower_instance.add_to_group("Placing")
 	add_child(tower_instance)
 	
