@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cuj5kuc7bygpa" path="res://Images/upgradedslime.png" id="2_k77rx"]
 [ext_resource type="Texture2D" uid="uid://dvwm63ayh3fkl" path="res://Images/Container1.png" id="2_pyg2t"]
 [ext_resource type="Script" uid="uid://do4tgrdwtpmjk" path="res://Scripts/StoreButton.gd" id="3_8yel7"]
-[ext_resource type="Texture2D" uid="uid://bjo101irxvywc" path="res://Images/CoinIcon.png" id="3_hse3h"]
+[ext_resource type="Texture2D" uid="uid://b4f85mvcjro6r" path="res://Images/currency.png" id="3_hse3h"]
 [ext_resource type="StyleBox" uid="uid://blnqarv337owm" path="res://Styles/StoreButton.tres" id="3_oslf8"]
 [ext_resource type="StyleBox" uid="uid://bljt7qfon0e4u" path="res://Styles/StoreButtonHover.tres" id="4_hse3h"]
 [ext_resource type="PackedScene" uid="uid://rjyep2h6eaul" path="res://UpgradedTower.tscn" id="4_k77rx"]
@@ -43,8 +43,8 @@ theme_override_font_sizes/font_size = 60
 text = "0"
 
 [node name="Sprite2D" type="Sprite2D" parent="NinePatchRect/GoldLabel" unique_id=766613227]
-position = Vector2(-65, 42)
-scale = Vector2(2, 2)
+position = Vector2(-59, 45)
+scale = Vector2(1, 0.958)
 texture = ExtResource("3_hse3h")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=717600032]

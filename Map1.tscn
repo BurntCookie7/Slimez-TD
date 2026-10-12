@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c6qj0en5ovpbd" path="res://Scripts/DefaultMap.gd" id="1_3wee7"]
 [ext_resource type="PackedScene" uid="uid://bljawtbqyh825" path="res://BasicBrick.tscn" id="2_s0gvh"]
 [ext_resource type="PackedScene" uid="uid://cr0am0oj8cqf7" path="res://FastBrick.tscn" id="3_6p4ww"]
-[ext_resource type="TileSet" uid="uid://86nn4rdeqekn" path="res://Grass.tres" id="4_6p4ww"]
+[ext_resource type="TileSet" uid="uid://86nn4rdeqekn" path="res://Tilemaps/Grass.tres" id="4_6p4ww"]
 [ext_resource type="Curve2D" uid="uid://dtjaatxur5x1e" path="res://Map1Path.tres" id="4_j556s"]
 
 [node name="Root" type="Node2D" unique_id=1557150537]
