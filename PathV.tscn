@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dacbtcon7ucth"]
 
-[ext_resource type="Texture2D" uid="uid://b7shk8jbq0771" path="res://Images/grass_path_1111_1.png" id="1_jnavc"]
+[ext_resource type="Texture2D" uid="uid://5y3q7l2b5flk" path="res://Images/001.png" id="1_5jg0m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qkyit"]
 size = Vector2(82, 82)
@@ -9,8 +9,9 @@ size = Vector2(82, 82)
 z_index = -10
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1321484170]
-scale = Vector2(0.63, 0.63)
-texture = ExtResource("1_jnavc")
+position = Vector2(2.861023e-06, 4.529953e-06)
+scale = Vector2(0.6833333, 0.68333334)
+texture = ExtResource("1_5jg0m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=83909488]
 shape = SubResource("RectangleShape2D_qkyit")

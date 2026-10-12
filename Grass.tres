@@ -1,0 +1,32 @@
+[gd_resource type="TileSet" format=3 uid="uid://86nn4rdeqekn"]
+
+[ext_resource type="PackedScene" uid="uid://dacbtcon7ucth" path="res://PathV.tscn" id="1_185ve"]
+[ext_resource type="PackedScene" uid="uid://dmhfsit3ej34w" path="res://PathH.tscn" id="2_1hgj1"]
+[ext_resource type="PackedScene" uid="uid://b3ahw3oabd3pt" path="res://PathC.tscn" id="3_qw21a"]
+[ext_resource type="Texture2D" uid="uid://bd8ia1l7jmcp2" path="res://Images/slimeztdgrasssheet.png" id="4_cthme"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hv236"]
+scenes/1/scene = ExtResource("1_185ve")
+scenes/2/scene = ExtResource("2_1hgj1")
+scenes/3/scene = ExtResource("3_qw21a")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1l4m"]
+texture = ExtResource("4_cthme")
+margins = Vector2i(12, 6)
+texture_region_size = Vector2i(80, 80)
+0:1/0 = 0
+1:1/0 = 0
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+
+[resource]
+tile_size = Vector2i(80, 80)
+custom_data_layer_0/name = "Type"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("TileSetScenesCollectionSource_hv236")
+sources/2 = SubResource("TileSetAtlasSource_f1l4m")

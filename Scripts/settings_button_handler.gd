@@ -14,7 +14,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	pass
+	volume_slider.value = Globals.volume
 
 func _on_option_button_item_selected(index: int) -> void:
 	selected_resolution = resolution.get_item_text(resolution.selected)
@@ -30,6 +30,7 @@ func _on_option_button_item_selected(index: int) -> void:
 
 func _on_h_slider_value_changed(value: float) -> void:
 	volume_number.text = str(int(volume_slider.value))
+	Globals.volume = volume_slider.value
 
 
 func _on_difficulty_choice_item_selected(index: int) -> void:

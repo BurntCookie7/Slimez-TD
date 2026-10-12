@@ -67,7 +67,7 @@ offset_top = 1033.0
 offset_right = 160.0
 offset_bottom = 1070.0
 theme_override_font_sizes/font_size = 27
-text = "v0.1.0 [ALPHA TESTING]"
+text = "v0.2.0 [ALPHA TESTING]"
 
 [connection signal="mouse_entered" from="Resume" to="Resume" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Resume" to="Resume" method="_on_mouse_exited"]

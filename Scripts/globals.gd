@@ -6,6 +6,7 @@ var placing: bool = false
 var difficulty = 1
 var map: PackedScene
 var paused: bool
+var volume: int
 
 func _ready() -> void:
 	Console.add_command("sv_set_gold", change_gold, 1)
