@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://1urhtyxnaqmv" path="res://Scripts/play_game.gd" id="4_7r1g0"]
 [ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="4_e2xy7"]
 [ext_resource type="Script" uid="uid://dhwawolmiugfr" path="res://Scripts/settings.gd" id="6_7r1g0"]
+[ext_resource type="PackedScene" uid="uid://dh3ca13p12bai" path="res://Settings.tscn" id="7_cqjrg"]
 
 [sub_resource type="Gradient" id="Gradient_7r1g0"]
 offsets = PackedFloat32Array(0, 0.41566265, 1)
@@ -59,6 +60,7 @@ pivot_offset = Vector2(123.387, 42.5)
 theme_override_font_sizes/font_size = 38
 text = "Settings"
 script = ExtResource("6_7r1g0")
+settings_scene = ExtResource("7_cqjrg")
 
 [node name="Label" type="Label" parent="." unique_id=2140144761]
 offset_left = 16.0

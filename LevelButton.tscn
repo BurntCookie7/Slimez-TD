@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://btdmj7xi1j8a4"]
+
+[ext_resource type="Script" uid="uid://8iw0cn6o41y4" path="res://Scripts/level_button.gd" id="1_ju1u4"]
+
+[node name="Control" type="Button" unique_id=413868160]
+offset_right = 8.0
+offset_bottom = 1137.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 228
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("1_ju1u4")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

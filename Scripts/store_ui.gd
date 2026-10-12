@@ -13,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	gold_label.text = "Gold: " + str(Globals.gold)
+	gold_label.text = str(Globals.gold)
 
 
 func _on_upgraded_tower_pressed() -> void:
