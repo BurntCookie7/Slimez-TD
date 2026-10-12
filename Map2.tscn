@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c6qj0en5ovpbd" path="res://Scripts/DefaultMap.gd" id="1_wq7yg"]
 [ext_resource type="PackedScene" uid="uid://bljawtbqyh825" path="res://BasicBrick.tscn" id="2_xh7kc"]
 [ext_resource type="PackedScene" uid="uid://cr0am0oj8cqf7" path="res://FastBrick.tscn" id="3_rpcyw"]
-[ext_resource type="TileSet" uid="uid://86nn4rdeqekn" path="res://Grass.tres" id="4_k8vv2"]
+[ext_resource type="TileSet" uid="uid://86nn4rdeqekn" path="res://Tilemaps/Grass.tres" id="4_k8vv2"]
 
 [sub_resource type="Curve2D" id="Curve2D_gipgj"]
 _data = {
