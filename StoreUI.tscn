@@ -35,16 +35,16 @@ patch_margin_bottom = 52
 
 [node name="GoldLabel" type="Label" parent="NinePatchRect" unique_id=202573754]
 layout_mode = 0
-offset_left = -1252.0
-offset_top = 23.0
-offset_right = -699.0
-offset_bottom = 106.0
-theme_override_font_sizes/font_size = 60
+offset_left = -1306.0
+offset_top = 5.0
+offset_right = -753.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 40
 text = "0"
 
 [node name="Sprite2D" type="Sprite2D" parent="NinePatchRect/GoldLabel" unique_id=766613227]
-position = Vector2(-59, 45)
-scale = Vector2(1, 0.958)
+position = Vector2(-32.999996, 29)
+scale = Vector2(0.6, 0.5748)
 texture = ExtResource("3_hse3h")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=717600032]
