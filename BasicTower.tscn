@@ -56,7 +56,7 @@ shape = SubResource("RectangleShape2D_qkyit")
 scale = Vector2(1.8, 1.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaceBounds" unique_id=897026737]
-position = Vector2(-2.2888184e-05, -9.536743e-07)
+position = Vector2(1.8189894e-12, 1.1368684e-13)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_vn12v")
 debug_color = Color(0.93013865, 0.26529106, 0, 0.41960785)
