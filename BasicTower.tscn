@@ -59,6 +59,7 @@ scale = Vector2(1.8, 1.8)
 position = Vector2(-2.2888184e-05, -9.536743e-07)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_vn12v")
+debug_color = Color(0.93013865, 0.26529106, 0, 0.41960785)
 
 [connection signal="body_entered" from="AttackBounds" to="." method="_on_attack_bounds_body_entered"]
 [connection signal="body_exited" from="AttackBounds" to="." method="_on_attack_bounds_body_exited"]
