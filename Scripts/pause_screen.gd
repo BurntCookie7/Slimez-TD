@@ -19,3 +19,8 @@ func _on_settings_pressed() -> void:
 	add_child(settings_instance)
 	move_child(settings_instance, -1)
 	
+
+
+func _on_main_menu_pressed() -> void:
+	get_tree().paused = not get_tree().paused
+	get_tree().change_scene_to_file("res://MainMenu.tscn")

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dh3ca13p12bai" path="res://Settings.tscn" id="2_m852v"]
 [ext_resource type="Script" uid="uid://cubahmttaffpo" path="res://Scripts/resume.gd" id="3_m852v"]
 [ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="4_jtgmu"]
+[ext_resource type="Script" uid="uid://bjl4miablujwn" path="res://main_menu_button.gd" id="5_ihmgj"]
 [ext_resource type="Script" uid="uid://dhwawolmiugfr" path="res://Scripts/settings.gd" id="5_rkflb"]
 
 [sub_resource type="Gradient" id="Gradient_7r1g0"]
@@ -32,30 +33,30 @@ texture = ExtResource("2_626fi")
 
 [node name="Resume" type="Button" parent="." unique_id=94812364 node_paths=PackedStringArray("root")]
 offset_left = 784.0
-offset_top = 615.0
+offset_top = 534.0
 offset_right = 1030.7742
-offset_bottom = 700.0
+offset_bottom = 619.0
 pivot_offset = Vector2(123.387, 42.5)
 theme_override_font_sizes/font_size = 38
 text = "Resume"
 script = ExtResource("3_m852v")
 root = NodePath("..")
 
-[node name="QUIT" type="Button" parent="." unique_id=1119784955]
+[node name="MainMenu" type="Button" parent="." unique_id=1119784955]
 offset_left = 783.0
-offset_top = 824.0
+offset_top = 743.0
 offset_right = 1029.7742
-offset_bottom = 909.0
+offset_bottom = 828.0
 pivot_offset = Vector2(123.387, 42.5)
 theme_override_font_sizes/font_size = 38
-text = "Quit"
-script = ExtResource("4_jtgmu")
+text = "Main Menu"
+script = ExtResource("5_ihmgj")
 
 [node name="Settings" type="Button" parent="." unique_id=196713502]
 offset_left = 784.0
-offset_top = 720.0
+offset_top = 639.0
 offset_right = 1030.7742
-offset_bottom = 805.0
+offset_bottom = 724.0
 pivot_offset = Vector2(123.387, 42.5)
 theme_override_font_sizes/font_size = 38
 text = "Settings"
@@ -69,12 +70,25 @@ offset_bottom = 1070.0
 theme_override_font_sizes/font_size = 27
 text = "v0.2.0 [ALPHA TESTING]"
 
+[node name="Quit" type="Button" parent="." unique_id=49334509]
+offset_left = 783.0
+offset_top = 850.0
+offset_right = 1029.7742
+offset_bottom = 935.0
+pivot_offset = Vector2(123.387, 42.5)
+theme_override_font_sizes/font_size = 38
+text = "Quit"
+script = ExtResource("4_jtgmu")
+
 [connection signal="mouse_entered" from="Resume" to="Resume" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Resume" to="Resume" method="_on_mouse_exited"]
 [connection signal="pressed" from="Resume" to="Resume" method="_on_pressed"]
-[connection signal="mouse_entered" from="QUIT" to="QUIT" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="QUIT" to="QUIT" method="_on_mouse_exited"]
-[connection signal="pressed" from="QUIT" to="QUIT" method="_on_pressed"]
+[connection signal="mouse_entered" from="MainMenu" to="MainMenu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu" to="MainMenu" method="_on_mouse_exited"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="mouse_entered" from="Settings" to="Settings" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Settings" to="Settings" method="_on_mouse_exited"]
 [connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="mouse_entered" from="Quit" to="Quit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Quit" to="Quit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

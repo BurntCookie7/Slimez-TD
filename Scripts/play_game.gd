@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://LevelSelect.tscn")
+	get_tree().change_scene_to_file("res://MapSelect.tscn")
 
 
 func _on_mouse_entered() -> void:

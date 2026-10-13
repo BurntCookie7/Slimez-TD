@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://dbu567qu1ynne"]
 
-[ext_resource type="PackedScene" uid="uid://btdmj7xi1j8a4" path="res://LevelButton.tscn" id="1_q3t17"]
-[ext_resource type="Texture2D" uid="uid://lbws0x68g27p" path="res://addons/at-icons/node/cross.svg" id="1_sf6f5"]
-[ext_resource type="Texture2D" uid="uid://b1a4nmxwkihmb" path="res://Images/Screenshot 2026-10-11 205404.png" id="2_0bmyu"]
-[ext_resource type="PackedScene" uid="uid://cwpdkben1kevt" path="res://Map1.tscn" id="3_0bmyu"]
-[ext_resource type="Texture2D" uid="uid://duvhwjys61wpd" path="res://Images/Screenshot 2026-10-11 224053.png" id="4_gyrbw"]
-[ext_resource type="PackedScene" uid="uid://bpemb4t20b417" path="res://Map2.tscn" id="4_nb57j"]
+[ext_resource type="PackedScene" uid="uid://btdmj7xi1j8a4" path="res://LevelButton.tscn" id="1_h22vw"]
+[ext_resource type="Texture2D" uid="uid://bq7u4yw084bn2" path="res://Images/Screenshot 2026-10-12 181211.png" id="2_pv5kx"]
+[ext_resource type="PackedScene" uid="uid://cwpdkben1kevt" path="res://Map1.tscn" id="3_wofcp"]
+[ext_resource type="Texture2D" uid="uid://3qoc4wvjab56" path="res://Images/Screenshot 2026-10-12 182241.png" id="4_ng5wm"]
+[ext_resource type="PackedScene" uid="uid://bpemb4t20b417" path="res://Map2.tscn" id="5_gshl5"]
+[ext_resource type="Texture2D" uid="uid://lbws0x68g27p" path="res://addons/at-icons/node/cross.svg" id="6_1w6wo"]
 
 [sub_resource type="Gradient" id="Gradient_7r1g0"]
 offsets = PackedFloat32Array(0, 0.28653845, 1)
@@ -73,33 +73,33 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
 
-[node name="Map1" parent="Control/Panel" unique_id=1191639475 instance=ExtResource("1_q3t17")]
+[node name="Map1" parent="Control/Panel" unique_id=1191639475 instance=ExtResource("1_h22vw")]
 layout_mode = 0
 offset_left = 99.99999
 offset_top = 81.99999
 offset_right = 2001.0
 offset_bottom = 2299.0
-text = "Level 1"
-icon = ExtResource("2_0bmyu")
-level = ExtResource("3_0bmyu")
+text = "Grasslands 1"
+icon = ExtResource("2_pv5kx")
+level = ExtResource("3_wofcp")
 
-[node name="Map2" parent="Control/Panel" unique_id=413868160 instance=ExtResource("1_q3t17")]
+[node name="Map2" parent="Control/Panel" unique_id=413868160 instance=ExtResource("1_h22vw")]
 layout_mode = 0
 offset_left = 379.0
 offset_top = 82.0
 offset_right = 2224.0
 offset_bottom = 2300.0
-text = "Level 2"
-icon = ExtResource("4_gyrbw")
-level = ExtResource("4_nb57j")
+text = "Grasslands 2"
+icon = ExtResource("4_ng5wm")
+level = ExtResource("5_gshl5")
 
 [node name="Title" type="Label" parent="Control" unique_id=737676659]
 layout_mode = 0
-offset_left = 558.0
+offset_left = 626.0
 offset_top = 12.0
-offset_right = 1208.0
+offset_right = 1276.0
 offset_bottom = 149.0
-text = "LEVEL SELECT"
+text = "MAP SELECT"
 label_settings = SubResource("LabelSettings_g4v7s")
 
 [node name="Exit" type="Button" parent="Control" unique_id=1896530818]
@@ -109,5 +109,5 @@ offset_top = 32.0
 offset_right = 1700.0
 offset_bottom = 64.0
 scale = Vector2(3, 3)
-icon = ExtResource("1_sf6f5")
+icon = ExtResource("6_1w6wo")
 script = SubResource("GDScript_ardn0")
