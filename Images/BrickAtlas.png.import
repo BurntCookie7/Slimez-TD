@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duvhwjys61wpd"
-path="res://.godot/imported/Screenshot 2026-10-11 224053.png-d366ed28af1ce0c610a285d5b4d98dab.ctex"
+uid="uid://cyah6d4rr7qsg"
+path="res://.godot/imported/BrickAtlas.png-78794c407faa2a77743286156d6f928b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Screenshot 2026-10-11 224053.png"
-dest_files=["res://.godot/imported/Screenshot 2026-10-11 224053.png-d366ed28af1ce0c610a285d5b4d98dab.ctex"]
+source_file="res://Images/BrickAtlas.png"
+dest_files=["res://.godot/imported/BrickAtlas.png-78794c407faa2a77743286156d6f928b.ctex"]
 
 [params]
 

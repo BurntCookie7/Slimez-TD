@@ -28,7 +28,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Quick-Add-Menu/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/console/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg", "res://addons/kritaImports/plugin.cfg")
+enabled=PackedStringArray("res://addons/KritaWizard/plugin.cfg", "res://addons/Quick-Add-Menu/plugin.cfg", "res://addons/at-icons/plugin.cfg", "res://addons/console/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
 
 [global_group]
 
