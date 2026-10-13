@@ -1,0 +1,14 @@
+[remap]
+
+importer="kra_importer"
+type="Image"
+uid="uid://bcwkh8tr4mxea"
+path="res://.godot/imported/bar.png.kra-96bc6e0c8725257f8042781954f311f4.res"
+
+[deps]
+
+source_file="res://Images/bar.png.kra"
+dest_files=["res://.godot/imported/bar.png.kra-96bc6e0c8725257f8042781954f311f4.res"]
+
+[params]
+
