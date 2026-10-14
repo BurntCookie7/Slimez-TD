@@ -5,8 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://dh3ca13p12bai" path="res://Settings.tscn" id="2_m852v"]
 [ext_resource type="Script" uid="uid://cubahmttaffpo" path="res://Scripts/resume.gd" id="3_m852v"]
 [ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="4_jtgmu"]
+[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Vipnagorgialla Bd It.otf" id="4_rkflb"]
 [ext_resource type="Script" uid="uid://bjl4miablujwn" path="res://main_menu_button.gd" id="5_ihmgj"]
 [ext_resource type="Script" uid="uid://dhwawolmiugfr" path="res://Scripts/settings.gd" id="5_rkflb"]
+[ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Vipnagorgialla Rg It.otf" id="8_fsvti"]
 
 [sub_resource type="Gradient" id="Gradient_7r1g0"]
 offsets = PackedFloat32Array(0)
@@ -37,17 +39,19 @@ offset_top = 534.0
 offset_right = 1030.7742
 offset_bottom = 619.0
 pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_rkflb")
 theme_override_font_sizes/font_size = 38
 text = "Resume"
 script = ExtResource("3_m852v")
 root = NodePath("..")
 
 [node name="MainMenu" type="Button" parent="." unique_id=1119784955]
-offset_left = 783.0
+offset_left = 766.0
 offset_top = 743.0
-offset_right = 1029.7742
+offset_right = 1047.0
 offset_bottom = 828.0
 pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_rkflb")
 theme_override_font_sizes/font_size = 38
 text = "Main Menu"
 script = ExtResource("5_ihmgj")
@@ -58,6 +62,7 @@ offset_top = 639.0
 offset_right = 1030.7742
 offset_bottom = 724.0
 pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_rkflb")
 theme_override_font_sizes/font_size = 38
 text = "Settings"
 script = ExtResource("5_rkflb")
@@ -67,6 +72,7 @@ offset_left = 16.0
 offset_top = 1033.0
 offset_right = 160.0
 offset_bottom = 1070.0
+theme_override_fonts/font = ExtResource("8_fsvti")
 theme_override_font_sizes/font_size = 27
 text = "v0.2.0 [ALPHA TESTING]"
 
@@ -76,6 +82,7 @@ offset_top = 850.0
 offset_right = 1029.7742
 offset_bottom = 935.0
 pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_rkflb")
 theme_override_font_sizes/font_size = 38
 text = "Quit"
 script = ExtResource("4_jtgmu")

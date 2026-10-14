@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://blujbajg0rpfh" path="res://Scripts/logomove.gd" id="3_cqjrg"]
 [ext_resource type="Script" uid="uid://1urhtyxnaqmv" path="res://Scripts/play_game.gd" id="4_7r1g0"]
 [ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="4_e2xy7"]
+[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Vipnagorgialla Bd It.otf" id="4_fimr5"]
 [ext_resource type="Script" uid="uid://dhwawolmiugfr" path="res://Scripts/settings.gd" id="6_7r1g0"]
 [ext_resource type="PackedScene" uid="uid://dh3ca13p12bai" path="res://Settings.tscn" id="7_cqjrg"]
 [ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Vipnagorgialla Rg It.otf" id="8_e2xy7"]
@@ -33,31 +34,34 @@ texture = ExtResource("2_7r1g0")
 script = ExtResource("3_cqjrg")
 
 [node name="Play Game" type="Button" parent="." unique_id=94812364]
-offset_left = 1663.0
+offset_left = 1610.0
 offset_top = 389.0
-offset_right = 1909.7742
+offset_right = 1886.0
 offset_bottom = 474.0
 pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_fimr5")
 theme_override_font_sizes/font_size = 38
 text = "Play Game"
 script = ExtResource("4_7r1g0")
 
 [node name="QUIT" type="Button" parent="." unique_id=1119784955]
-offset_left = 1662.0
-offset_top = 598.0
-offset_right = 1908.7742
-offset_bottom = 683.0
+offset_left = 1626.0
+offset_top = 599.0
+offset_right = 1872.7742
+offset_bottom = 684.0
 pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_fimr5")
 theme_override_font_sizes/font_size = 38
 text = "Quit"
 script = ExtResource("4_e2xy7")
 
 [node name="Settings" type="Button" parent="." unique_id=196713502]
-offset_left = 1663.0
-offset_top = 494.0
-offset_right = 1909.7742
-offset_bottom = 579.0
+offset_left = 1627.0
+offset_top = 495.0
+offset_right = 1873.7742
+offset_bottom = 580.0
 pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_fimr5")
 theme_override_font_sizes/font_size = 38
 text = "Settings"
 script = ExtResource("6_7r1g0")

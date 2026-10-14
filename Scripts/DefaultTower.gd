@@ -18,6 +18,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	manage_projectile()
+	if is_instance_valid(target_enemy):
+		look_at(target_enemy.global_position)
 	
 func is_overlapping() -> bool:
 	return not overlapping_bodies.is_empty()

@@ -19,8 +19,11 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_qkyit"]
 radius = 48.010414
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkyit"]
-size = Vector2(32, 32)
+[sub_resource type="CircleShape2D" id="CircleShape2D_vxmqi"]
+radius = 63.683243
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vn12v"]
+radius = 32.407406
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1398299392]
 modulate = Color(1.1638972, 1.1638972, 1.1638972, 1)
@@ -31,8 +34,9 @@ projectile = ExtResource("2_651yp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=355360105]
 visibility_layer = 2
-position = Vector2(-0.99999994, -11.999999)
-scale = Vector2(0.4, 0.4)
+position = Vector2(0, 1.9073486e-06)
+rotation = -1.5707964
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_651yp")
 
 [node name="RadiusDisplay" type="Sprite2D" parent="." unique_id=463146462]
@@ -49,17 +53,15 @@ visible = false
 shape = SubResource("CircleShape2D_qkyit")
 
 [node name="Placebounds2" type="CollisionShape2D" parent="." unique_id=1716567113]
-visible = false
-scale = Vector2(2.7, 2.7)
-shape = SubResource("RectangleShape2D_qkyit")
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CircleShape2D_vxmqi")
 
 [node name="PlaceBounds" type="Area2D" parent="." unique_id=1414247941]
-visible = false
 scale = Vector2(1.8, 1.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlaceBounds" unique_id=897026737]
-scale = Vector2(1.5, 1.5)
-shape = SubResource("RectangleShape2D_qkyit")
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CircleShape2D_vn12v")
 
 [connection signal="body_entered" from="AttackBounds" to="." method="_on_attack_bounds_body_entered"]
 [connection signal="body_exited" from="AttackBounds" to="." method="_on_attack_bounds_body_exited"]
