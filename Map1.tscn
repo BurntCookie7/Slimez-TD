@@ -9,7 +9,8 @@
 [node name="Root2" type="Node2D" unique_id=1557150537]
 script = ExtResource("1_3wee7")
 enemies = Array[PackedScene]([ExtResource("2_s0gvh"), ExtResource("3_6p4ww")])
-number_of_enemies = 15
+enemies_per_round = 10
+rounds = 20
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=195936465]
 position = Vector2(0, 48)

@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 
 @onready var health_system: HealthSystem = $HealthSystem
+@export var damage: int
 var tower = null
 
 func _ready() -> void:

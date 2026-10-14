@@ -27,4 +27,5 @@ func set_map(map_choice: PackedScene):
 	var Map_Instance = map_choice.instantiate()
 	current_map = Map_Instance
 	add_child(Map_Instance)
+	Map_Instance.name = "LoadedMap"
 	timer.timeout.connect(Map_Instance._on_timer_timeout)

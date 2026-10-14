@@ -14,8 +14,8 @@ point_count = 11
 [node name="Root2" type="Node2D" unique_id=1557150537]
 script = ExtResource("1_wq7yg")
 enemies = Array[PackedScene]([ExtResource("2_xh7kc"), ExtResource("3_rpcyw")])
-number_of_enemies = 20
-enemy_spawn_rate = 2.0
+enemies_per_round = 15
+rounds = 30
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=195936465]
 position = Vector2(0, 48)

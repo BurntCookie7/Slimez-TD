@@ -7,6 +7,9 @@ var difficulty = 1
 var map: PackedScene
 var paused: bool
 var volume: int
+var round: int
+var round_active: bool = false
+var player_health: int = 100
 
 func _ready() -> void:
 	Console.add_command("std_set_gold", change_gold, 1)

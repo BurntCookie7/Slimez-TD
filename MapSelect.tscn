@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3qoc4wvjab56" path="res://Images/Screenshot 2026-10-12 182241.png" id="4_ng5wm"]
 [ext_resource type="PackedScene" uid="uid://bpemb4t20b417" path="res://Map2.tscn" id="5_gshl5"]
 [ext_resource type="Texture2D" uid="uid://lbws0x68g27p" path="res://addons/at-icons/node/cross.svg" id="6_1w6wo"]
+[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Vipnagorgialla Bd It.otf" id="6_pv5kx"]
 
 [sub_resource type="Gradient" id="Gradient_7r1g0"]
 offsets = PackedFloat32Array(0, 0.28653845, 1)
@@ -40,6 +41,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://MainMenu.tscn\")
 "
 
 [node name="Node2D" type="Node2D" unique_id=2079989691]
@@ -95,10 +100,11 @@ level = ExtResource("5_gshl5")
 
 [node name="Title" type="Label" parent="Control" unique_id=737676659]
 layout_mode = 0
-offset_left = 626.0
-offset_top = 12.0
-offset_right = 1276.0
-offset_bottom = 149.0
+offset_left = 493.0
+offset_top = 23.0
+offset_right = 1287.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("6_pv5kx")
 text = "MAP SELECT"
 label_settings = SubResource("LabelSettings_g4v7s")
 
@@ -111,3 +117,5 @@ offset_bottom = 64.0
 scale = Vector2(3, 3)
 icon = ExtResource("6_1w6wo")
 script = SubResource("GDScript_ardn0")
+
+[connection signal="pressed" from="Control/Exit" to="Control/Exit" method="_on_pressed"]
