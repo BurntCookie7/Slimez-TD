@@ -19,11 +19,11 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_qkyit"]
 radius = 48.010414
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkyit"]
-size = Vector2(32, 32)
+[sub_resource type="CircleShape2D" id="CircleShape2D_y5y2t"]
+radius = 14.074074
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vn12v"]
-radius = 13.338493
+radius = 14.074076
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1398299392]
 z_index = 2
@@ -41,6 +41,7 @@ scale = Vector2(2, 2)
 texture = SubResource("GradientTexture2D_qkyit")
 
 [node name="AttackBounds" type="Area2D" parent="." unique_id=1961040088]
+visible = false
 scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 4
@@ -50,7 +51,7 @@ shape = SubResource("CircleShape2D_qkyit")
 
 [node name="Placebounds2" type="CollisionShape2D" parent="." unique_id=1716567113]
 scale = Vector2(2.7, 2.7)
-shape = SubResource("RectangleShape2D_qkyit")
+shape = SubResource("CircleShape2D_y5y2t")
 
 [node name="PlaceBounds" type="Area2D" parent="." unique_id=1414247941]
 scale = Vector2(1.8, 1.8)

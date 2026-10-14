@@ -6,7 +6,7 @@
 [ext_resource type="TileSet" uid="uid://86nn4rdeqekn" path="res://Tilemaps/Grass.tres" id="4_6p4ww"]
 [ext_resource type="Curve2D" uid="uid://dtjaatxur5x1e" path="res://Map1Path.tres" id="4_j556s"]
 
-[node name="Root" type="Node2D" unique_id=1557150537]
+[node name="Root2" type="Node2D" unique_id=1557150537]
 script = ExtResource("1_3wee7")
 enemies = Array[PackedScene]([ExtResource("2_s0gvh"), ExtResource("3_6p4ww")])
 number_of_enemies = 15
@@ -24,6 +24,6 @@ curve = ExtResource("4_j556s")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=487808488]
 position = Vector2(-154.27971, 74.13534)
-rotates = false
+rotation = -0.002625696
 loop = false
 metadata/Speed = 0.0

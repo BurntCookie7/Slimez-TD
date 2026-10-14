@@ -1,7 +1,7 @@
 [remap]
 
-importer="kra_importer"
-type="Image"
+importer="krita_wizard.plugin.noop"
+type="PackedDataContainer"
 uid="uid://dqyifueqhuohd"
 path="res://.godot/imported/newbrickv1directions.png.kra-985fa9bd5e3b4fa262f455d0b23376a8.res"
 

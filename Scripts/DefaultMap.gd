@@ -25,7 +25,7 @@ func spawn_enemy(enemy_choice: PackedScene):
 	else:
 		var follower := PathFollow2D.new()
 		path_node.add_child(follower)
-		follower.rotates = false
+		follower.rotates = true
 		follower.loop = false
 		var enemy_instance = enemy_choice.instantiate()
 		follower.set_meta("Speed", enemy_instance.get_meta("Speed"))

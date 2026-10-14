@@ -1,7 +1,7 @@
 [remap]
 
-importer="kra_importer"
-type="Image"
+importer="krita_wizard.plugin.noop"
+type="PackedDataContainer"
 uid="uid://bcwkh8tr4mxea"
 path="res://.godot/imported/bar.png.kra-96bc6e0c8725257f8042781954f311f4.res"
 
