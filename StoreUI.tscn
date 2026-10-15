@@ -41,9 +41,9 @@ script = ExtResource("1_iy5eu")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1510380860]
 layout_mode = 0
-offset_left = -560.0
+offset_left = -556.0
 offset_top = 4.0
-offset_right = -22.0
+offset_right = -18.0
 offset_bottom = 1078.0
 texture = SubResource("ImageTexture_hse3h")
 patch_margin_left = 48
@@ -53,9 +53,9 @@ patch_margin_bottom = 52
 
 [node name="GoldLabel" type="Label" parent="NinePatchRect" unique_id=202573754]
 layout_mode = 0
-offset_left = -1286.0
+offset_left = -1305.0
 offset_top = 21.0
-offset_right = -733.0
+offset_right = -752.0
 offset_bottom = 104.0
 theme_override_fonts/font = ExtResource("2_pyg2t")
 theme_override_font_sizes/font_size = 40
@@ -68,9 +68,9 @@ texture = ExtResource("3_hse3h")
 
 [node name="HealthLabel" type="Label" parent="NinePatchRect" unique_id=1056588542]
 layout_mode = 0
-offset_left = -1061.0
+offset_left = -1080.0
 offset_top = 21.0
-offset_right = -508.0
+offset_right = -527.0
 offset_bottom = 104.0
 theme_override_fonts/font = ExtResource("2_pyg2t")
 theme_override_font_sizes/font_size = 40
@@ -140,13 +140,14 @@ offset_right = -396.0
 offset_bottom = 1055.0
 theme = SubResource("Theme_g4v7s")
 texture_normal = ExtResource("9_oslf8")
-texture_pressed = ExtResource("10_hse3h")
+texture_pressed = ExtResource("9_oslf8")
+texture_hover = ExtResource("10_hse3h")
 
 [node name="RoundTitle" type="Label" parent="." unique_id=994859806]
 layout_mode = 0
-offset_left = -734.0
+offset_left = -718.0
 offset_top = 18.0
-offset_right = -557.0
+offset_right = -541.0
 offset_bottom = 67.0
 theme_override_fonts/font = ExtResource("2_pyg2t")
 theme_override_font_sizes/font_size = 30

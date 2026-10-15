@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://b652kjn360i3s"]
+
+[ext_resource type="Script" uid="uid://tyjmqm3ytqt3" path="res://Scripts/GameOverHandler.gd" id="1_hlmrq"]
+[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="4_rgmw3"]
+[ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Fonts/Vipnagorgialla Rg It.otf" id="7_nklv4"]
+[ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="8_m8tni"]
+
+[sub_resource type="Gradient" id="Gradient_7r1g0"]
+offsets = PackedFloat32Array(0.0038461538)
+colors = PackedColorArray(0, 0, 0, 0.5882353)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
+gradient = SubResource("Gradient_7r1g0")
+
+[node name="Node2D" type="Node2D" unique_id=1860486964]
+process_mode = 2
+z_index = 1
+script = ExtResource("1_hlmrq")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=897154933]
+position = Vector2(953.42206, 549.98926)
+rotation = -1.5707964
+scale = Vector2(18.187166, 30.79444)
+texture = SubResource("GradientTexture2D_g4v7s")
+
+[node name="Retry" type="Button" parent="." unique_id=601722305]
+offset_left = 767.0
+offset_top = 632.0
+offset_right = 1048.0
+offset_bottom = 717.0
+pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_rgmw3")
+theme_override_font_sizes/font_size = 38
+text = "Retry"
+
+[node name="MainMenu" type="Button" parent="." unique_id=1119784955]
+offset_left = 766.0
+offset_top = 743.0
+offset_right = 1047.0
+offset_bottom = 828.0
+pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_rgmw3")
+theme_override_font_sizes/font_size = 38
+text = "Main Menu"
+
+[node name="Label" type="Label" parent="." unique_id=2140144761]
+offset_left = 16.0
+offset_top = 1033.0
+offset_right = 160.0
+offset_bottom = 1070.0
+theme_override_fonts/font = ExtResource("7_nklv4")
+theme_override_font_sizes/font_size = 27
+text = "v0.2.0 [ALPHA TESTING]"
+
+[node name="Quit" type="Button" parent="." unique_id=49334509]
+offset_left = 783.0
+offset_top = 850.0
+offset_right = 1029.7742
+offset_bottom = 935.0
+pivot_offset = Vector2(123.387, 42.5)
+theme_override_fonts/font = ExtResource("4_rgmw3")
+theme_override_font_sizes/font_size = 38
+text = "Quit"
+script = ExtResource("8_m8tni")
+
+[node name="GameOver" type="Label" parent="." unique_id=1272096888]
+offset_left = 336.0
+offset_top = 122.0
+offset_right = 1555.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("7_nklv4")
+theme_override_font_sizes/font_size = 174
+text = "Game Over"
+
+[connection signal="mouse_entered" from="Retry" to="Retry" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Retry" to="Retry" method="_on_mouse_exited"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
+[connection signal="mouse_entered" from="MainMenu" to="MainMenu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MainMenu" to="MainMenu" method="_on_mouse_exited"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="mouse_entered" from="Quit" to="Quit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Quit" to="Quit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]
