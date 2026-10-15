@@ -1,15 +1,16 @@
 extends Node
 
-
-var gold: int = 20
+var default_gold: int = 30
+var gold: int = default_gold
 var placing: bool = false
 var difficulty = 1
-var map: PackedScene
+var map: PackedScene = load("res://Map1.tscn")
 var paused: bool
 var volume: int
 var round: int
 var round_active: bool = false
-var player_health: int = 100
+var default_player_health: int = 100
+var player_health: int = default_player_health
 
 func _ready() -> void:
 	Console.add_command("std_set_gold", change_gold, 1)

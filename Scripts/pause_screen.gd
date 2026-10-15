@@ -17,7 +17,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_settings_pressed() -> void:
 	var settings_instance = settings_scene.instantiate()
 	add_child(settings_instance)
-	move_child(settings_instance, -1)
+	move_child(settings_instance, 0)
 	
 
 

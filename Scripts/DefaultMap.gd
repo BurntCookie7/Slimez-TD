@@ -42,7 +42,7 @@ func _on_timer_timeout():
 	var enemy_index = randi_range(0, 1)
 	if Globals.round_active:
 		spawn_enemy(enemies[enemy_index])
-	
+
 func manage_enemies():
 	for i in range(active_followers.size() - 1, -1, -1):
 		var follower = active_followers[i]

@@ -2,30 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bchltysemkxj8" path="res://Custom Nodes/Health_System.gd" id="1_0nt7i"]
 [ext_resource type="Script" uid="uid://dufk3272dmd0t" path="res://Scripts/DefaultBrick.gd" id="1_wlg6t"]
-[ext_resource type="Texture2D" uid="uid://dv6io8psf0ckd" path="res://Images/Basic Brick Frames/brickdown.png" id="2_qgx8b"]
-[ext_resource type="Texture2D" uid="uid://c3425r48kax14" path="res://Images/Basic Brick Frames/brickright.png" id="3_l7qed"]
-[ext_resource type="Texture2D" uid="uid://dnb6k8ulmvj0r" path="res://Images/Basic Brick Frames/brickedup.png" id="4_dumrt"]
-[ext_resource type="Texture2D" uid="uid://y2r827kv13bb" path="res://Images/Basic Brick Frames/brickleft.png" id="5_h270t"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_wlg6t"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_qgx8b")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_l7qed")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_dumrt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_h270t")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 3.0
-}]
+[ext_resource type="Texture2D" uid="uid://bal8qgc0jnqat" path="res://Images/newbrickv1.png" id="2_sb4l4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qkyit"]
 size = Vector2(23, 24)
@@ -41,11 +18,10 @@ script = ExtResource("1_wlg6t")
 damage = 10
 metadata/Speed = 0.5
 
-[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=849060366]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=737308790]
 rotation = -1.5707964
 scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_wlg6t")
-frame_progress = 0.32578686
+texture = ExtResource("2_sb4l4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1107220184]
 shape = SubResource("RectangleShape2D_qkyit")

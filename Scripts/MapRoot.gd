@@ -5,6 +5,7 @@ extends Node
 
 #@export var Map1: PackedScene
 #@export var Map2: PackedScene
+@export var editor_preload: PackedScene
 @onready var timer: Timer = $Timer
 var current_map = null
 
@@ -18,7 +19,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
-		set_map(Globals.map)
+		set_map(editor_preload)
 
 
 func set_map(map_choice: PackedScene):

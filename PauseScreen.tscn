@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://cubahmttaffpo" path="res://Scripts/resume.gd" id="3_m852v"]
 [ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="4_jtgmu"]
 [ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="4_rkflb"]
-[ext_resource type="Script" path="res://main_menu_button.gd" id="5_ihmgj"]
 [ext_resource type="Script" uid="uid://dhwawolmiugfr" path="res://Scripts/settings.gd" id="5_rkflb"]
 [ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Fonts/Vipnagorgialla Rg It.otf" id="8_fsvti"]
 
@@ -54,7 +53,6 @@ pivot_offset = Vector2(123.387, 42.5)
 theme_override_fonts/font = ExtResource("4_rkflb")
 theme_override_font_sizes/font_size = 38
 text = "Main Menu"
-script = ExtResource("5_ihmgj")
 
 [node name="Settings" type="Button" parent="." unique_id=196713502]
 offset_left = 784.0
