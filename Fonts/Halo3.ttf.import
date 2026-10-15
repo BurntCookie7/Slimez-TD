@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://7wbuhwdy1h5j"
-path="res://.godot/imported/Anak Cakep.otf-cdc092ca8de88c6d4c1b386202336e5c.fontdata"
+uid="uid://daimuec1w0o2a"
+path="res://.godot/imported/Halo3.ttf-1765b716edb1e5321d04bf2929a6d6b6.fontdata"
 
 [deps]
 
-source_file="res://Anak Cakep.otf"
-dest_files=["res://.godot/imported/Anak Cakep.otf-cdc092ca8de88c6d4c1b386202336e5c.fontdata"]
+source_file="res://Fonts/Halo3.ttf"
+dest_files=["res://.godot/imported/Halo3.ttf-1765b716edb1e5321d04bf2929a6d6b6.fontdata"]
 
 [params]
 

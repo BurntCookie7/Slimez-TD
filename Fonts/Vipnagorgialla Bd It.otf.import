@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://daimuec1w0o2a"
-path="res://.godot/imported/Halo3.ttf-ca9e8fa3761072453f5035d6c0466e5f.fontdata"
+uid="uid://dq3hwlqrhhpdd"
+path="res://.godot/imported/Vipnagorgialla Bd It.otf-9108fdf3e90b5eb6b7c11e889cf5566a.fontdata"
 
 [deps]
 
-source_file="res://Halo3.ttf"
-dest_files=["res://.godot/imported/Halo3.ttf-ca9e8fa3761072453f5035d6c0466e5f.fontdata"]
+source_file="res://Fonts/Vipnagorgialla Bd It.otf"
+dest_files=["res://.godot/imported/Vipnagorgialla Bd It.otf-9108fdf3e90b5eb6b7c11e889cf5566a.fontdata"]
 
 [params]
 

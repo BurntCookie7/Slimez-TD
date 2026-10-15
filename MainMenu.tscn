@@ -5,10 +5,10 @@
 [ext_resource type="Script" uid="uid://blujbajg0rpfh" path="res://Scripts/logomove.gd" id="3_cqjrg"]
 [ext_resource type="Script" uid="uid://1urhtyxnaqmv" path="res://Scripts/play_game.gd" id="4_7r1g0"]
 [ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="4_e2xy7"]
-[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Vipnagorgialla Bd It.otf" id="4_fimr5"]
+[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="4_fimr5"]
 [ext_resource type="Script" uid="uid://dhwawolmiugfr" path="res://Scripts/settings.gd" id="6_7r1g0"]
 [ext_resource type="PackedScene" uid="uid://dh3ca13p12bai" path="res://Settings.tscn" id="7_cqjrg"]
-[ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Vipnagorgialla Rg It.otf" id="8_e2xy7"]
+[ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Fonts/Vipnagorgialla Rg It.otf" id="8_e2xy7"]
 
 [sub_resource type="Gradient" id="Gradient_7r1g0"]
 offsets = PackedFloat32Array(0, 0.41566265, 1)

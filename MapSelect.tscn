@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3qoc4wvjab56" path="res://Images/Screenshot 2026-10-12 182241.png" id="4_ng5wm"]
 [ext_resource type="PackedScene" uid="uid://bpemb4t20b417" path="res://Map2.tscn" id="5_gshl5"]
 [ext_resource type="Texture2D" uid="uid://lbws0x68g27p" path="res://addons/at-icons/node/cross.svg" id="6_1w6wo"]
-[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Vipnagorgialla Bd It.otf" id="6_pv5kx"]
+[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="6_pv5kx"]
 
 [sub_resource type="Gradient" id="Gradient_7r1g0"]
 offsets = PackedFloat32Array(0, 0.28653845, 1)

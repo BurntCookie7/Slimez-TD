@@ -50,7 +50,8 @@ func manage_enemies():
 		if follower.progress_ratio >= 1.0:
 			follower.queue_free()
 			var enemy = follower.get_node("Enemy")
-			Globals.player_health -= enemy.damage
+			if is_instance_valid(enemy):
+				Globals.player_health -= enemy.damage
 			path_node.remove_child(follower)
 			active_followers.remove_at(i)
 			continue

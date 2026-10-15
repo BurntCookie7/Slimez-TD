@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://dh3ca13p12bai" path="res://Settings.tscn" id="2_m852v"]
 [ext_resource type="Script" uid="uid://cubahmttaffpo" path="res://Scripts/resume.gd" id="3_m852v"]
 [ext_resource type="Script" uid="uid://dx55oroq5gqit" path="res://Scripts/quit.gd" id="4_jtgmu"]
-[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Vipnagorgialla Bd It.otf" id="4_rkflb"]
-[ext_resource type="Script" uid="uid://bjl4miablujwn" path="res://main_menu_button.gd" id="5_ihmgj"]
+[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="4_rkflb"]
+[ext_resource type="Script" path="res://main_menu_button.gd" id="5_ihmgj"]
 [ext_resource type="Script" uid="uid://dhwawolmiugfr" path="res://Scripts/settings.gd" id="5_rkflb"]
-[ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Vipnagorgialla Rg It.otf" id="8_fsvti"]
+[ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Fonts/Vipnagorgialla Rg It.otf" id="8_fsvti"]
 
 [sub_resource type="Gradient" id="Gradient_7r1g0"]
 offsets = PackedFloat32Array(0)
