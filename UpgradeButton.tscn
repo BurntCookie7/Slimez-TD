@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://codlwqv4m2s3l"]
 
-[ext_resource type="Script" uid="uid://bfb51pt12b5s4" path="res://UpgradeButtonConfig.gd" id="1_v14of"]
+[ext_resource type="Script" uid="uid://bfb51pt12b5s4" path="res://Scripts/UpgradeButtonConfig.gd" id="1_v14of"]
 
 [node name="Control" type="Control" unique_id=1997435485]
 layout_mode = 3
