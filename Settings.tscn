@@ -140,40 +140,9 @@ offset_bottom = 264.0
 text = "Volume"
 label_settings = SubResource("LabelSettings_geqgc")
 
-[node name="Difficulty" type="Control" parent="NinePatchRect" unique_id=1980542479]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="NinePatchRect/Difficulty" unique_id=1509035732]
-layout_mode = 0
-offset_left = 93.0
-offset_top = 306.0
-offset_right = 224.0
-offset_bottom = 348.0
-text = "Difficulty"
-label_settings = SubResource("LabelSettings_qkyit")
-
-[node name="DifficultyChoice" type="OptionButton" parent="NinePatchRect/Difficulty" unique_id=318514652]
-layout_mode = 0
-offset_left = 246.00003
-offset_top = 312.0
-offset_right = 369.00003
-offset_bottom = 343.0
-scale = Vector2(1.2, 1.2)
-selected = 0
-item_count = 3
-popup/item_0/text = "Normal"
-popup/item_0/id = 1
-popup/item_1/text = "Medium"
-popup/item_1/id = 2
-popup/item_2/text = "Hard"
-popup/item_2/id = 3
-
 [node name="button_handler" type="Node" parent="." unique_id=1690282651]
 script = ExtResource("3_mx4kw")
 
 [connection signal="pressed" from="NinePatchRect/Exit" to="NinePatchRect/Exit" method="_on_pressed"]
 [connection signal="item_selected" from="NinePatchRect/Resolution/OptionButton" to="button_handler" method="_on_option_button_item_selected"]
 [connection signal="value_changed" from="NinePatchRect/Volume/HSlider" to="button_handler" method="_on_h_slider_value_changed"]
-[connection signal="item_selected" from="NinePatchRect/Difficulty/DifficultyChoice" to="button_handler" method="_on_difficulty_choice_item_selected"]

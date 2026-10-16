@@ -8,12 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://lbws0x68g27p" path="res://addons/at-icons/node/cross.svg" id="6_1w6wo"]
 [ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="6_pv5kx"]
 
-[sub_resource type="Gradient" id="Gradient_7r1g0"]
-offsets = PackedFloat32Array(0, 0.28653845, 1)
-colors = PackedColorArray(4.3919312e-07, 0.35924366, 0.059094742, 1, 0, 0.6062632, 0.18506917, 1, 6.112605e-06, 0.8082528, 0.38310087, 1)
+[sub_resource type="Gradient" id="Gradient_pv5kx"]
+offsets = PackedFloat32Array(0, 0.77884614, 1)
+colors = PackedColorArray(5.8358535e-07, 0.26174912, 0.005914499, 1, 4.0911138e-07, 0.61322534, 0.033692874, 1, 5.7756904e-07, 0.8242195, 0.063914254, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_cgbbg"]
-gradient = SubResource("Gradient_7r1g0")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mx4kw"]
+gradient = SubResource("Gradient_pv5kx")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
 bg_color = Color(0, 0, 0, 0.59607846)
@@ -50,10 +50,10 @@ func _on_pressed() -> void:
 [node name="Node2D" type="Node2D" unique_id=2079989691]
 
 [node name="BG" type="Sprite2D" parent="." unique_id=1819777376]
-position = Vector2(953.42206, 549.98926)
+position = Vector2(953, 550)
 rotation = -1.5707964
 scale = Vector2(18.187166, 30.79444)
-texture = SubResource("GradientTexture2D_cgbbg")
+texture = SubResource("GradientTexture2D_mx4kw")
 
 [node name="Control" type="Control" parent="." unique_id=1947210280]
 layout_mode = 3

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bpb6yrh4uc5ep"]
+
+[ext_resource type="Script" uid="uid://blprwuq23xcc" path="res://Scripts/DifficultySelect.gd" id="1_2hryf"]
+[ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Fonts/Vipnagorgialla Rg It.otf" id="2_d865x"]
+[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="3_0td5c"]
+
+[sub_resource type="Gradient" id="Gradient_7r1g0"]
+offsets = PackedFloat32Array(0.11923077, 0.725, 1)
+colors = PackedColorArray(0.3894507, 0.0017193267, 0.6625642, 1, 0.5451718, 0.32086515, 1, 1, 0.7053154, 0.5941149, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cgbbg"]
+gradient = SubResource("Gradient_7r1g0")
+
+[node name="Node2D" type="Node2D" unique_id=2079989691]
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1819777376]
+position = Vector2(953.42206, 549.98926)
+rotation = -1.5707964
+scale = Vector2(18.187166, 30.79444)
+texture = SubResource("GradientTexture2D_cgbbg")
+
+[node name="Control" type="Control" parent="." unique_id=1212211321]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2hryf")
+
+[node name="Easy" type="Button" parent="Control" unique_id=1849582]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 512.0
+offset_right = 555.0
+offset_bottom = 641.0
+theme_override_fonts/font = ExtResource("2_d865x")
+theme_override_font_sizes/font_size = 80
+text = "Easy"
+
+[node name="Label" type="Label" parent="Control" unique_id=35361860]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 51.0
+offset_right = 1332.0
+offset_bottom = 214.0
+theme_override_fonts/font = ExtResource("3_0td5c")
+theme_override_font_sizes/font_size = 135
+text = "Difficulty"
+
+[node name="Medium" type="Button" parent="Control" unique_id=1240601451]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 517.0
+offset_right = 1115.0
+offset_bottom = 646.0
+theme_override_fonts/font = ExtResource("2_d865x")
+theme_override_font_sizes/font_size = 80
+text = "Medium"
+
+[node name="Hard" type="Button" parent="Control" unique_id=2005745848]
+layout_mode = 0
+offset_left = 1287.0
+offset_top = 509.0
+offset_right = 1621.0
+offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("2_d865x")
+theme_override_font_sizes/font_size = 80
+text = "Hard"
+
+[connection signal="pressed" from="Control/Easy" to="Control" method="_on_easy_pressed"]
+[connection signal="pressed" from="Control/Medium" to="Control" method="_on_medium_pressed"]
+[connection signal="pressed" from="Control/Hard" to="Control" method="_on_hard_pressed"]
