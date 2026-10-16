@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dwthddlvd7db6" path="res://Images/newslime.png" id="8_oslf8"]
 [ext_resource type="Texture2D" uid="uid://nn4oq7ghibni" path="res://Images/PlayButton.png" id="9_oslf8"]
 [ext_resource type="Texture2D" uid="uid://byitt7uy4ec7b" path="res://Images/PlayButtonPressed.png" id="10_hse3h"]
+[ext_resource type="PackedScene" uid="uid://d3emfn4uyyk2" path="res://TowerContextMenu.tscn" id="12_3k0bw"]
 
 [sub_resource type="Image" id="Image_jj5vk"]
 data = {
@@ -161,6 +162,13 @@ offset_bottom = 88.0
 theme_override_fonts/font = ExtResource("2_pyg2t")
 theme_override_font_sizes/font_size = 40
 text = "0/20"
+
+[node name="ContextMenu" parent="." unique_id=487388740 instance=ExtResource("12_3k0bw")]
+layout_mode = 1
+offset_left = -1121.0
+offset_top = 603.0
+offset_right = -1121.0
+offset_bottom = 603.0
 
 [connection signal="pressed" from="VBoxContainer2/Control/UpgradedTower" to="." method="_on_upgraded_tower_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Control2/BasicTower" to="." method="_on_basic_tower_pressed"]

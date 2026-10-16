@@ -38,6 +38,7 @@ func manage_placing():
 				tower_instance.remove_from_group("Placing")
 				tower_instance.add_to_group("Placed")
 				Globals.placing = false
+				tower_instance.input_pickable = true
 		else:
 			tower_instance.radius_display.hide()
 			

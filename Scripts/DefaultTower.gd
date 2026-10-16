@@ -3,6 +3,7 @@ extends StaticBody2D
 @export var attack_range: float = 0.5
 @onready var radius: Area2D = $AttackBounds
 @onready var radius_display: Sprite2D = $RadiusDisplay
+@onready var context_menu: Control = $ContextMenu
 @export var projectile: PackedScene
 @onready var projectile_speed: float
 var overlapping_bodies: Array[Node2D] = []
@@ -14,13 +15,18 @@ func _ready() -> void:
 	radius.scale = Vector2 (attack_range, attack_range)
 	radius_display.scale = Vector2 (attack_range, attack_range)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	manage_projectile()
 	if is_instance_valid(target_enemy):
 		look_at(target_enemy.global_position)
-	
+
+func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+	if is_in_group("Placed"):
+		if event is InputEventMouseButton and event.pressed:
+			if event.button_index == MOUSE_BUTTON_RIGHT:
+				pass
+
 func is_overlapping() -> bool:
 	return not overlapping_bodies.is_empty()
 
