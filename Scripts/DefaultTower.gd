@@ -1,15 +1,23 @@
 extends StaticBody2D
 
+@export_group("Upgradables")
 @export var attack_range: float = 0.5
+@export var projectile_speed: float = 5.0
+@export var projectile_damage: int = 50.0
+@export_group("")
 @onready var radius: Area2D = $AttackBounds
 @onready var radius_display: Sprite2D = $RadiusDisplay
-@onready var context_menu: Control = $ContextMenu
+#@onready var context_menu: Control = $ContextMenu
 @export var projectile: PackedScene
-@onready var projectile_speed: float
+
 var overlapping_bodies: Array[Node2D] = []
 var projectile_instance = null
 var target_enemy = null
 var overlap: bool
+var upgradables := [
+	{"name": "Damage", "cost": 50, "level": 0, "max_level": 5},
+	{"name": "Range",  "cost": 75, "level": 0, "max_level": 3},
+]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	radius.scale = Vector2 (attack_range, attack_range)
@@ -25,7 +33,8 @@ func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void
 	if is_in_group("Placed"):
 		if event is InputEventMouseButton and event.pressed:
 			if event.button_index == MOUSE_BUTTON_RIGHT:
-				pass
+				Globals.tower_selected.emit(self)
+				viewport.set_input_as_handled()
 
 func is_overlapping() -> bool:
 	return not overlapping_bodies.is_empty()
@@ -55,7 +64,8 @@ func shoot() -> void:
 		return
 	projectile_instance = projectile.instantiate()
 	add_child(projectile_instance)
-	projectile_speed = projectile_instance.speed
+	projectile_instance.speed = projectile_speed
+	projectile_instance.damage = projectile_damage
 	projectile_instance.active = true
 		
 	
@@ -86,3 +96,13 @@ func _find_new_target() -> Node2D:
 		if is_instance_valid(body) and body.is_in_group("Enemy"):
 			return body
 	return null
+	
+func get_upgradables() -> Array:
+	var result := []
+	var in_group := false
+	for p in get_property_list():
+		if p.usage & PROPERTY_USAGE_GROUP:
+			in_group = (p.name == "Upgradables")
+		elif in_group:
+			result.append(p.name)
+	return result

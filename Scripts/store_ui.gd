@@ -2,8 +2,8 @@ extends Control
 @export var map_parent: Node
 @onready var map = map_parent.get_node("LoadedMap")
 @export var Placer: Node2D = null
-@onready var upgraded_tower: Button = $VBoxContainer2/Control/UpgradedTower
-@onready var basic_tower: Button = $VBoxContainer2/Control2/BasicTower
+@onready var upgraded_tower: Button = $GridContainer/Control/UpgradedTower
+@onready var basic_tower: Button = $GridContainer/Control2/BasicTower
 @onready var gold_label: Label = $NinePatchRect/GoldLabel
 @onready var round_display: Label = $RoundTitle/RoundNumber
 @onready var health_display: Label = $NinePatchRect/HealthLabel

@@ -11,6 +11,8 @@ var round: int
 var round_active: bool = false
 var default_player_health: int = 100
 var player_health: int = default_player_health
+signal tower_selected(tower)
+signal tower_deselected 
 
 func _ready() -> void:
 	Console.add_command("std_set_gold", change_gold, 1)

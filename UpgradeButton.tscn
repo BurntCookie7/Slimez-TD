@@ -10,17 +10,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v14of")
-Title = "Placeholder"
 
-[node name="Button" type="Button" parent="." unique_id=1902534468]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=648502699]
 layout_mode = 0
-offset_left = 103.0
-offset_top = 7.0
-offset_right = 178.0
-offset_bottom = 38.0
+offset_right = 163.0
+offset_bottom = 60.0
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=1656257948]
+layout_mode = 2
+text = "Placeholder"
+
+[node name="Label" type="Label" parent="HBoxContainer/Label" unique_id=841376759]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 20.0
+offset_right = 96.0
+offset_bottom = 43.0
+text = "<null>/10"
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1902534468]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "Upgrade"
 
-[node name="Price" type="Label" parent="Button" unique_id=1225285649]
+[node name="Price" type="Label" parent="HBoxContainer/Button" unique_id=1225285649]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 4.0
@@ -28,18 +43,4 @@ offset_right = 121.0
 offset_bottom = 27.0
 text = "$5"
 
-[node name="Label" type="Label" parent="." unique_id=1656257948]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Placeholder"
-
-[node name="Label" type="Label" parent="Label" unique_id=841376759]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 20.0
-offset_right = 96.0
-offset_bottom = 43.0
-text = "0/5"
-
-[connection signal="pressed" from="Button" to="." method="_on_upgrade_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_upgrade_pressed"]

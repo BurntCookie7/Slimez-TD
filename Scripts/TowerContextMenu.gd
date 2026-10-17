@@ -1,9 +1,11 @@
 extends Control
 @export var sell_price: int = 9
-
+@export var upgrade_button_scene: PackedScene
+@onready var container: VBoxContainer = $NinePatchRect/Control/VBoxContainer
+var current_tower
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Globals.tower_selected.connect(_on_tower_selected)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,8 +15,40 @@ func _process(delta: float) -> void:
 
 func _on_sell_button_pressed() -> void:
 	Globals.gold += sell_price
-	owner.queue_free()
+	current_tower.queue_free()
+	hide()
+	for child in container.get_children():
+		child.queue_free()
 
 
 func _on_exit_pressed() -> void:
 	hide()
+
+func create_upgrade_button(title: String, price: int, variable):
+	var upgrade_button_instance = upgrade_button_scene.instantiate()
+	upgrade_button_instance.title = str(title)
+	upgrade_button_instance.tower = current_tower
+	upgrade_button_instance.tower_var = variable
+	container.add_child(upgrade_button_instance)
+
+func first_upper(text: String):
+	var specialized_text = text[0].to_upper() + text.substr(1)
+	return specialized_text
+
+func format_title(value: String):
+	var split_title = value.split("_")
+	var first_word = split_title[0]
+	var second_word = split_title[1]
+	var final_title = first_upper(first_word) + " " + first_upper(second_word)
+	return final_title
+
+func _on_tower_selected(tower):
+	show()
+	current_tower = tower
+	for child in container.get_children():
+		child.queue_free()
+	for stat in tower.get_upgradables():
+		var value = tower.get(stat)
+		create_upgrade_button(format_title(stat), 10, stat)
+		
+		

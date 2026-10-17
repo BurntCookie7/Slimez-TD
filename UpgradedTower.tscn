@@ -30,6 +30,7 @@ modulate = Color(1.1638972, 1.1638972, 1.1638972, 1)
 z_index = 2
 script = ExtResource("1_651yp")
 attack_range = 3.0
+projectile_damage = 10
 projectile = ExtResource("2_651yp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=355360105]
