@@ -6,21 +6,9 @@
 [ext_resource type="StyleBox" uid="uid://c0q50874m2p3v" path="res://Styles/SellButton.tres" id="3_oswyx"]
 [ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Fonts/Vipnagorgialla Rg It.otf" id="4_jggkg"]
 [ext_resource type="Texture2D" uid="uid://lbws0x68g27p" path="res://addons/at-icons/node/cross.svg" id="4_v60e3"]
+[ext_resource type="StyleBox" uid="uid://dnywsbqsm1gxk" path="res://Styles/SellButtonHovered.tres" id="6_as3sl"]
 [ext_resource type="Script" uid="uid://cu5sau5hmy46m" path="res://Scripts/sell_button.gd" id="6_jggkg"]
 [ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="7_7l25g"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0jl2"]
-bg_color = Color(0.11847069, 0.32154638, 0, 1)
-skew = Vector2(0.02, 0)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.048794374, 0.14287856, 3.6098065e-08, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [node name="Control" type="Control" unique_id=487388740]
 layout_mode = 3
@@ -52,10 +40,10 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/Control" unique_id=466538472]
 layout_mode = 0
 offset_left = -327.0
-offset_top = 81.0
+offset_top = 97.925
 offset_right = 163.0
-offset_bottom = 440.0
-theme_override_constants/separation = 40
+offset_bottom = 456.925
+theme_override_constants/separation = 110
 
 [node name="Sell" type="Control" parent="NinePatchRect/Control" unique_id=798855749]
 anchors_preset = 0
@@ -73,7 +61,7 @@ offset_bottom = 49.0
 theme_override_fonts/font = ExtResource("4_jggkg")
 theme_override_styles/normal = ExtResource("3_oswyx")
 theme_override_styles/pressed = ExtResource("3_oswyx")
-theme_override_styles/hover = SubResource("StyleBoxFlat_v0jl2")
+theme_override_styles/hover = ExtResource("6_as3sl")
 text = "Sell  $9"
 script = ExtResource("6_jggkg")
 
@@ -100,7 +88,7 @@ offset_top = 21.0
 offset_right = 188.0
 offset_bottom = 56.0
 theme_override_fonts/font = ExtResource("7_7l25g")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 40
 text = "Upgrades"
 
 [connection signal="pressed" from="NinePatchRect/Control/Sell/SellButton" to="." method="_on_sell_button_pressed"]

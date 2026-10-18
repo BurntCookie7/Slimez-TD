@@ -22,13 +22,16 @@ func _on_sell_button_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
+	current_tower.radius_display.hide()
 	hide()
 
-func create_upgrade_button(title: String, price: int, variable):
+func create_upgrade_button(title: String, price: int, variable, step: int, upgrade_price: int):
 	var upgrade_button_instance = upgrade_button_scene.instantiate()
 	upgrade_button_instance.title = str(title)
 	upgrade_button_instance.tower = current_tower
 	upgrade_button_instance.tower_var = variable
+	upgrade_button_instance.upgrade_step = step
+	upgrade_button_instance.price = upgrade_price
 	container.add_child(upgrade_button_instance)
 
 func first_upper(text: String):
@@ -49,6 +52,6 @@ func _on_tower_selected(tower):
 		child.queue_free()
 	for stat in tower.get_upgradables():
 		var value = tower.get(stat)
-		create_upgrade_button(format_title(stat), 10, stat)
+		create_upgrade_button(format_title(stat), 10, stat, tower.upgrade_steps[stat], tower.upgrade_prices[stat])
 		
 		

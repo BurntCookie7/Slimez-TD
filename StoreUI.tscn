@@ -164,6 +164,7 @@ theme_override_font_sizes/font_size = 40
 text = "0/20"
 
 [node name="ContextMenu" parent="." unique_id=487388740 instance=ExtResource("12_3k0bw")]
+visible = false
 layout_mode = 1
 offset_left = -950.0
 offset_top = 603.0
