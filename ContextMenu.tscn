@@ -41,8 +41,8 @@ offset_bottom = 40.0
 layout_mode = 0
 offset_left = -327.0
 offset_top = 97.925
-offset_right = 42.0
-offset_bottom = 407.0
+offset_right = 163.0
+offset_bottom = 456.925
 theme_override_constants/separation = 110
 
 [node name="Sell" type="Control" parent="NinePatchRect/Control" unique_id=798855749]

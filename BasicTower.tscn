@@ -1,95 +1,69 @@
 [gd_scene format=3 uid="uid://00l3ftkvq8ms"]
 
-[ext_resource type="Script" uid="uid://dr6qpk3ca0mhs" path="res://Scripts/TowerContextMenu.gd" id="1_cgcl0"]
-[ext_resource type="PackedScene" uid="uid://codlwqv4m2s3l" path="res://UpgradeButton.tscn" id="2_tj8pp"]
-[ext_resource type="Texture2D" uid="uid://ce2iatwdtjm6" path="res://Images/bar_full.png" id="3_7vuyk"]
-[ext_resource type="FontFile" uid="uid://ye48oxluhm2o" path="res://Fonts/Vipnagorgialla Rg It.otf" id="4_rm6sr"]
-[ext_resource type="StyleBox" uid="uid://c0q50874m2p3v" path="res://Styles/SellButton.tres" id="5_kvilw"]
-[ext_resource type="StyleBox" uid="uid://dnywsbqsm1gxk" path="res://Styles/SellButtonHovered.tres" id="6_yxtws"]
-[ext_resource type="Script" uid="uid://cu5sau5hmy46m" path="res://Scripts/sell_button.gd" id="7_0652i"]
-[ext_resource type="Texture2D" uid="uid://lbws0x68g27p" path="res://addons/at-icons/node/cross.svg" id="8_mt244"]
-[ext_resource type="FontFile" uid="uid://dq3hwlqrhhpdd" path="res://Fonts/Vipnagorgialla Bd It.otf" id="9_8gbg2"]
+[ext_resource type="Script" uid="uid://b0p3k4jhqcq2y" path="res://Scripts/DefaultTower.gd" id="1_yf1uy"]
+[ext_resource type="PackedScene" uid="uid://6k2mb6bhmfwx" path="res://BasicProjectile.tscn" id="2_vxmqi"]
+[ext_resource type="Texture2D" uid="uid://dwthddlvd7db6" path="res://Images/newslime.png" id="3_vxmqi"]
 
-[node name="Control" type="Control" unique_id=487388740]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_cgcl0")
-upgrade_button_scene = ExtResource("2_tj8pp")
+[sub_resource type="Gradient" id="Gradient_yf1uy"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.648, 0.68)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1852070371]
-layout_mode = 0
-offset_right = 406.0
-offset_bottom = 470.0
-texture = ExtResource("3_7vuyk")
-region_rect = Rect2(8, 0, 288, 296)
-patch_margin_left = 48
-patch_margin_top = 48
-patch_margin_right = 48
-patch_margin_bottom = 48
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qkyit"]
+gradient = SubResource("Gradient_yf1uy")
+width = 100
+height = 100
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
-[node name="Control" type="Control" parent="NinePatchRect" unique_id=303795943]
-anchors_preset = 0
-offset_left = 350.0
-offset_right = 390.0
-offset_bottom = 40.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_qkyit"]
+radius = 48.010414
 
-[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/Control" unique_id=466538472]
-layout_mode = 0
-offset_left = -327.0
-offset_top = 97.925
-offset_right = 163.0
-offset_bottom = 456.925
-theme_override_constants/separation = 110
+[sub_resource type="CircleShape2D" id="CircleShape2D_y5y2t"]
+radius = 14.074074
 
-[node name="Sell" type="Control" parent="NinePatchRect/Control" unique_id=798855749]
-anchors_preset = 0
-offset_left = -187.0
-offset_top = 404.0
-offset_right = 362.0
-offset_bottom = 404.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_vn12v"]
+radius = 13.338478
 
-[node name="SellButton" type="Button" parent="NinePatchRect/Control/Sell" unique_id=1967523298]
-layout_mode = 0
-offset_left = 155.0
-offset_top = 18.0
-offset_right = 219.0
-offset_bottom = 49.0
-theme_override_fonts/font = ExtResource("4_rm6sr")
-theme_override_styles/normal = ExtResource("5_kvilw")
-theme_override_styles/pressed = ExtResource("5_kvilw")
-theme_override_styles/hover = ExtResource("6_yxtws")
-text = "Sell  $9"
-script = ExtResource("7_0652i")
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1398299392]
+z_index = 2
+input_pickable = true
+script = ExtResource("1_yf1uy")
+attack_range = 3.0
+projectile = ExtResource("2_vxmqi")
 
-[node name="Exit" type="Control" parent="NinePatchRect/Control" unique_id=1017839770]
-anchors_preset = 0
-offset_left = -182.0
-offset_top = 3.0
-offset_right = 367.0
-offset_bottom = 3.0
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=355360105]
+visibility_layer = 2
+rotation = -1.5707964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_vxmqi")
 
-[node name="Exit" type="Button" parent="NinePatchRect/Control/Exit" unique_id=1728113170]
-layout_mode = 0
-offset_left = 195.0
-offset_top = 14.0
-offset_right = 218.0
-offset_bottom = 37.0
-icon = ExtResource("8_mt244")
-expand_icon = true
+[node name="RadiusDisplay" type="Sprite2D" parent="." unique_id=463146462]
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_qkyit")
 
-[node name="Label" type="Label" parent="NinePatchRect" unique_id=1529541426]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 21.0
-offset_right = 188.0
-offset_bottom = 56.0
-theme_override_fonts/font = ExtResource("9_8gbg2")
-theme_override_font_sizes/font_size = 40
-text = "Upgrades"
+[node name="AttackBounds" type="Area2D" parent="." unique_id=1961040088]
+visible = false
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 4
 
-[connection signal="pressed" from="NinePatchRect/Control/Sell/SellButton" to="." method="_on_sell_button_pressed"]
-[connection signal="pressed" from="NinePatchRect/Control/Exit/Exit" to="." method="_on_exit_pressed"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBounds" unique_id=239000383]
+shape = SubResource("CircleShape2D_qkyit")
+
+[node name="Placebounds2" type="CollisionShape2D" parent="." unique_id=1716567113]
+scale = Vector2(2.7, 2.7)
+shape = SubResource("CircleShape2D_y5y2t")
+
+[node name="PlaceBounds" type="Area2D" parent="." unique_id=1414247941]
+scale = Vector2(1.8, 1.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlaceBounds" unique_id=897026737]
+position = Vector2(1.8189894e-12, 1.1368684e-13)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_vn12v")
+
+[connection signal="body_entered" from="AttackBounds" to="." method="_on_attack_bounds_body_entered"]
+[connection signal="body_exited" from="AttackBounds" to="." method="_on_attack_bounds_body_exited"]
+[connection signal="body_entered" from="PlaceBounds" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="PlaceBounds" to="." method="_on_area_2d_body_exited"]
