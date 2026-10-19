@@ -24,6 +24,8 @@ func get_upgrade_amount(stat: String):
 			return 0.2
 		"projectile_damage":
 			return 10
+		"attack_cooldown":
+			return 0.05
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
