@@ -49,10 +49,12 @@ func _on_tower_selected(tower):
 	for child in container.get_children():
 		container.remove_child(child)
 		child.queue_free()
+	var control_fix = Control.new()
 	show()
 	current_tower = tower
 	for stat in tower.get_upgradables():
 		var value = tower.get(stat)
 		create_upgrade_button(format_title(stat), 10, stat, tower.upgrade_steps[stat], tower.upgrade_prices[stat])
-		
-		
+	control_fix.name = "Fix"
+	container.add_child(control_fix)
+	container.move_child(control_fix, -1)

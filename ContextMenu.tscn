@@ -87,9 +87,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_constants/separation = 110
 
-[node name="Control" type="Control" parent="NinePatchRect/Control/ScrollContainer/VBoxContainer" unique_id=1330918084]
-layout_mode = 2
-
 [node name="Label" type="Label" parent="NinePatchRect" unique_id=1529541426]
 layout_mode = 0
 offset_left = 19.0
