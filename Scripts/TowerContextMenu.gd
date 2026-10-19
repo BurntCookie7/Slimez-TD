@@ -1,7 +1,7 @@
 extends Control
 @export var sell_price: int = 9
 @export var upgrade_button_scene: PackedScene
-@onready var container: VBoxContainer = $NinePatchRect/Control/VBoxContainer
+@onready var container: VBoxContainer = $NinePatchRect/Control/ScrollContainer/VBoxContainer
 var current_tower
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -46,10 +46,11 @@ func format_title(value: String):
 	return final_title
 
 func _on_tower_selected(tower):
+	for child in container.get_children():
+		container.remove_child(child)
+		child.queue_free()
 	show()
 	current_tower = tower
-	for child in container.get_children():
-		child.queue_free()
 	for stat in tower.get_upgradables():
 		var value = tower.get(stat)
 		create_upgrade_button(format_title(stat), 10, stat, tower.upgrade_steps[stat], tower.upgrade_prices[stat])

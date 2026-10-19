@@ -37,14 +37,6 @@ offset_left = 350.0
 offset_right = 390.0
 offset_bottom = 40.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/Control" unique_id=466538472]
-layout_mode = 0
-offset_left = -327.0
-offset_top = 97.925
-offset_right = 30.0
-offset_bottom = 406.0
-theme_override_constants/separation = 110
-
 [node name="Sell" type="Control" parent="NinePatchRect/Control" unique_id=798855749]
 anchors_preset = 0
 offset_left = -187.0
@@ -80,6 +72,23 @@ offset_right = 218.0
 offset_bottom = 37.0
 icon = ExtResource("4_v60e3")
 expand_icon = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect/Control" unique_id=2112782025]
+layout_mode = 0
+offset_left = -334.0
+offset_top = 100.0
+offset_right = 36.0
+offset_bottom = 407.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/Control/ScrollContainer" unique_id=466538472]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 110
+
+[node name="Control" type="Control" parent="NinePatchRect/Control/ScrollContainer/VBoxContainer" unique_id=1330918084]
+layout_mode = 2
 
 [node name="Label" type="Label" parent="NinePatchRect" unique_id=1529541426]
 layout_mode = 0

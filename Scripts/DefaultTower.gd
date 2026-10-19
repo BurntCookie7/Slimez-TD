@@ -4,7 +4,7 @@ extends StaticBody2D
 @export var attack_range: float = 0.5
 @export var projectile_speed: float = 5.0
 @export var projectile_damage: int = 50.0
-@export var cooldown_: float
+@export var attack_cooldown: float
 @export_group("")
 @onready var radius: Area2D = $AttackBounds
 @onready var radius_display: Sprite2D = $RadiusDisplay
@@ -19,20 +19,19 @@ var target_enemy = null
 var overlap: bool
 var targets: Array[Node2D]
 var active_projectiles: Array[Dictionary]
-var upgradables := [
-	{"name": "Damage", "cost": 50, "level": 0, "max_level": 5},
-	{"name": "Range",  "cost": 75, "level": 0, "max_level": 3},
-]
+
 var upgrade_steps = {
 	"attack_range": 0,
 	"projectile_speed": 0,
 	"projectile_damage": 0,
+	"attack_cooldown": 0,
 }
 
 var upgrade_prices = {
 	"attack_range": 5,
 	"projectile_speed": 5,
 	"projectile_damage": 5,
+	"attack_cooldown": 5,
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
